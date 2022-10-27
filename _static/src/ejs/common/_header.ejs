@@ -1,50 +1,81 @@
 <% let path = jsonData.pages[pageId].path %>
-<li class="l-menu__item js-submenu-trigger">
-  <a href="./works" class="l-menu__link">WORKS</a>
 
-  <div class="l-menu-sub js-submenu is-none">
-    <div class="l-menu-sub__inner">
-      <figure>
-        <picture>
-          <source
-            srcset="./assets/images/common/submenu_img01.webp"
-            type="image/webp"
-          />
-          <img src="./assets/images/common/submenu_img01.jpg" alt="" />
-        </picture>
-      </figure>
-
-      <ul class="l-menu-sub__list">
-        <li class="l-menu-sub__item">
-          <a href="" class="l-menu-sub__link">
-            <div class="l-menu-sub__linkTitle">
-              <span class="eng">Architecture</span>
-              <span>建築事業</span>
-            </div>
-            <span class="arrow"></span>
-          </a>
+<header class="l-header">
+  <div class="l-header__inner">
+    <figure class="l-header__logo">
+      <img src="<%= path %>assets/images/common/logo.svg" alt="ロゴ" />
+    </figure>
+    <nav class="l-header__nav">
+      <ul class="l-header__menu">
+        <li class="l-header__menu-item">
+          <a href="" class="l-header__menu-link"> top </a>
         </li>
-
-        <li class="l-menu-sub__item">
-          <a href="" class="l-menu-sub__link">
-            <div class="l-menu-sub__linkTitle">
-              <span class="eng">Civil engineering</span>
-              <span>土木事業</span>
-            </div>
-            <span class="arrow"></span>
-          </a>
+        <li class="l-header__menu-item">
+          <a href="" class="l-header__menu-link"> companey </a>
         </li>
+        <li class="l-header__menu-item">
+          <a href="" class="l-header__menu-link"> service </a>
+        </li>
+        <li class="l-header__menu-item js-submenu-trigger">
+          <a href="" class="l-header__menu-link"> works </a>
 
-        <li class="l-menu-sub__item">
-          <a href="" class="l-menu-sub__link">
-            <div class="l-menu-sub__linkTitle">
-              <span class="eng">Housing</span>
-              <span>住宅事業</span>
+          <div class="l-header__submenu js-submenu is-none">
+            <div class="l-header__submenu-inner">
+              <figure class="l-header__submenu-image">
+                <img
+                  src="<%= path %>assets/images/common/submenu.jpg"
+                  alt="サブメニュー"
+                />
+              </figure>
             </div>
-            <span class="arrow"></span>
-          </a>
+            <ul class="l-header__submenu-list">
+              <li class="l-header__submenu-item">
+                <a href="" class="l-header__submenu-link">
+                  <div class="l-header__submenu-title">
+                    <span class="l-header__submenu-title--en"
+                      >Architecture</span
+                    >
+                    建築事業
+                  </div>
+                  <div class="l-header__submenu-arrow"></div>
+                </a>
+              </li>
+              <li class="l-header__submenu-item">
+                <a href="" class="l-header__submenu-link">
+                  <div class="l-header__submenu-title">
+                    <span class="l-header__submenu-title--en"
+                      >Civil engineering</span
+                    >
+                    土木事業
+                  </div>
+                  <div class="l-header__submenu-arrow"></div>
+                </a>
+              </li>
+              <li class="l-header__submenu-item">
+                <a href="" class="l-header__submenu-link">
+                  <div class="l-header__submenu-title">
+                    <span class="l-header__submenu-title--en">Housing</span>
+                    住宅事業
+                  </div>
+                  <div class="l-header__submenu-arrow"></div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </li>
+        <li class="l-header__menu-item">
+          <a href="" class="l-header__menu-link"> news </a>
         </li>
       </ul>
-    </div>
+
+      <ul class="l-header__btn-menu">
+        <li class="l-header__btn-menu-item">
+          <a href="" class="l-header__btn-menu-link"> recruit </a>
+        </li>
+        <li class="l-header__btn-menu-item--accent">
+          <a href="" class="l-header__btn-menu-link"> contact </a>
+        </li>
+      </ul>
+    </nav>
   </div>
-</li>
+</header>

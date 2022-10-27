@@ -1,13 +1,6 @@
 import jQuery from "jquery";
 const $ = jQuery;
 
-console.log("hello");
-console.log("tktk");
-
-$(function () {
-  $(".test02").css("color", "red");
-});
-
 /*==============================================================
   subMenu
   ・ヘッダーのメガメニュー

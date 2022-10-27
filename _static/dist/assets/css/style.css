@@ -1,7 +1,7 @@
 html {
   height: 100%;
   font-size: 62.5%;
-  line-height: 1.6;
+  line-height: 1.5;
   scroll-behavior: smooth;
 }
 
@@ -11,7 +11,7 @@ body {
   overflow-x: hidden;
   color: #333333;
   font-size: 1.6rem;
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
 }
 
 img,
@@ -431,12 +431,10 @@ th {
 }
 
 .l-header {
-  z-index: 1;
-  position: sticky;
-  top: 0;
-  background-color: #fff;
+  padding-top: 40px;
+  padding-inline: 40px;
 }
-.l-header__content {
+.l-header__inner {
   -webkit-box-pack: justify;
   -webkit-box-align: center;
   display: -webkit-box;
@@ -444,13 +442,61 @@ th {
           align-items: center;
           justify-content: space-between;
 }
-.l-header__logo {
-  display: inline-block;
-  max-width: 40%;
+.l-header__nav {
+  -webkit-box-align: center;
+  display: -webkit-box;
+  display: flex;
+          align-items: center;
 }
-
+.l-header__menu {
+  -webkit-box-align: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  display: -webkit-box;
+  display: flex;
+          flex-direction: row;
+          align-items: center;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+}
+.l-header__menu-item {
+  margin-right: 40px;
+}
+.l-header__btn-menu {
+  -webkit-box-align: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  display: -webkit-box;
+  display: flex;
+          flex-direction: row;
+          align-items: center;
+  font-weight: bold;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+}
+.l-header__btn-menu-item {
+  display: block;
+  padding: 1em;
+  background-color: #111111;
+  color: #ffffff;
+}
+.l-header__btn-menu-item--accent {
+  display: block;
+  padding: 1em;
+  background-color: #ebc110;
+  color: #ffffff;
+}
 .is-none {
   display: none;
+}
+
+.js-submenu-trigger {
+  position: relative;
+}
+
+.js-submenu {
+  position: absolute;
+  top: 50px;
 }
 
 .l-footer {

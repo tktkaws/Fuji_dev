@@ -1,23 +1,83 @@
-@use "./../foundation/variable" as *;
+@use "./../foundation/global" as *;
 
 .l-header {
-  position: sticky;
-  top: 0;
-  background-color: $color-base;
-  z-index: 1;
+  padding-inline: 40px;
+  padding-top: 40px;
 
-  &__content {
+  &__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
   &__logo {
-    display: inline-block;
-    max-width: 40%;
+  }
+  &__nav {
+    display: flex;
+    align-items: center;
+  }
+  &__menu {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-family: $f-en;
+    text-transform: uppercase;
+  }
+  &__menu-item {
+    margin-right: 40px;
+  }
+  &__menu-link {
+  }
+  &__btn-menu {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  &__btn-menu-item {
+    display: block;
+    padding: 1em;
+    background-color: $c-black;
+    color: $c-white;
+  }
+  &__btn-menu-item--accent {
+    display: block;
+    padding: 1em;
+    background-color: $c-accent;
+    color: $c-white;
+  }
+
+  &__ {
+  }
+
+  &__submenu {
+  }
+  &__ {
+  }
+  &__ {
+  }
+  &__ {
+  }
+  &__ {
+  }
+  &__ {
+  }
+  &__ {
+  }
+  &__ {
   }
 }
 
 .is-none {
   display: none;
+}
+
+.js-submenu-trigger {
+  position: relative;
+}
+
+.js-submenu {
+  position: absolute;
+  top: 50px;
 }
