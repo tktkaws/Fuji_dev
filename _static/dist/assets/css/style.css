@@ -432,6 +432,8 @@ th {
 }
 
 .l-header {
+  position: fixed;
+  width: 100%;
   padding-top: 40px;
   padding-inline: 40px;
   /* スクリーンリーダー */
@@ -633,6 +635,15 @@ th {
   -webkit-transition: opacity 0.3s linear;
   opacity: 0;
   pointer-events: none;
+  transition: opacity 0.3s linear;
+}
+
+.l-header.js-view .l-header__menu {
+  opacity: 1;
+}
+.l-header.js-hide .l-header__menu {
+  -webkit-transition: opacity 0.3s linear;
+  opacity: 0;
   transition: opacity 0.3s linear;
 }
 
