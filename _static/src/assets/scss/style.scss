@@ -12,10 +12,12 @@
 *--------------------------------------*/
 @use "./layout/header";
 @use "./layout/footer";
+@use "./layout/mobile-nav";
 
 /*-------------------
 * component
 -------------------*/
+@use "./object/component/common";
 @use "./object/component/inner";
 @use "./object/component/button";
 @use "./object/component/section";
