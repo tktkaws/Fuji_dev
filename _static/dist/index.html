@@ -20,6 +20,9 @@
    <link rel="stylesheet" href="./assets/css/style.css" />
    <!-- Remove "outline" when in focus(other than keyboard operation) -->
    <script src="https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js" integrity="sha384-xRa5B8rCDfdg0npZcxAh+RXswrbFk3g6dlHVeABeluN8EIwdyljz/LqJgc2R3KNA" crossorigin="anonymous" defer></script>
+   <!-- ファイルからの読み込みに切り替える -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
  </head>
  <body class="home">
    <div id="top" class="wrap" ontouchstart="">
@@ -160,7 +163,106 @@
        <!-- mobile-nav -->
      </header>
      <!-- main -->
-     <main class="l-main"></main>
+     <main class="l-main">
+       <section class="p-home-kv">
+         <div class="p-home-kv__grid-wrapper">
+           <!-- swiper-container -->
+           <div class="p-home-kv__swiper-container">
+             <div class="swiper">
+               <div class="swiper-wrapper">
+                 <div class="swiper-slide">
+                   <img src="./assets/images/home/slider01.jpg" alt="slider01" />
+                 </div>
+                 <div class="swiper-slide">
+                   <img src="./assets/images/home/slider02.jpg" alt="slider02" />
+                 </div>
+                 <div class="swiper-slide">
+                   <img src="./assets/images/home/slider03.jpg" alt="slider03" />
+                 </div>
+               </div>
+             </div>
+           </div>
+           <!-- swiper-container-text -->
+           <div class="p-home-kv__text-slider-container swiper-container-text">
+             <div class="p-home-kv__text-slider-wrapper swiper-wrapper">
+               <div class="p-home-kv__text-slider-slide swiper-slide">
+                 <div class="p-home-kv__text-slider-text slide-img">
+                   <div class="p-home-kv__text-slider-text-eng js-slider-text">
+                     <div class="p-home-kv__engWrap --archi">
+                       <span class="p-home-kv__engText">A</span>
+                       <span class="p-home-kv__engText">r</span>
+                       <span class="p-home-kv__engText">c</span>
+                       <span class="p-home-kv__engText">h</span>
+                       <span class="p-home-kv__engText">i</span>
+                       <span class="p-home-kv__engText">t</span>
+                       <span class="p-home-kv__engText">e</span>
+                       <span class="p-home-kv__engText">c</span>
+                       <span class="p-home-kv__engText">t</span>
+                       <span class="p-home-kv__engText">u</span>
+                       <span class="p-home-kv__engText">r</span>
+                       <span class="p-home-kv__engText">e</span>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+               <div class="p-home-kv__text-slider-slide swiper-slide">
+                 <div class="p-home-kv__text-slider-text slide-img">
+                   <div class="p-home-kv__text-slider-text-eng js-slider-text">
+                     <div class="p-home-kv__engWrap --civil">
+                       <span class="p-home-kv__engText">C</span>
+                       <span class="p-home-kv__engText">i</span>
+                       <span class="p-home-kv__engText">v</span>
+                       <span class="p-home-kv__engText">i</span>
+                       <span class="p-home-kv__engText">l</span>
+                       <span class="p-home-kv__engText">&nbsp;</span>
+                       <span class="p-home-kv__engText">E</span>
+                       <span class="p-home-kv__engText">n</span>
+                       <span class="p-home-kv__engText">g</span>
+                       <span class="p-home-kv__engText">i</span>
+                       <span class="p-home-kv__engText">n</span>
+                       <span class="p-home-kv__engText">e</span>
+                       <span class="p-home-kv__engText">e</span>
+                       <span class="p-home-kv__engText">r</span>
+                       <span class="p-home-kv__engText">i</span>
+                       <span class="p-home-kv__engText">n</span>
+                       <span class="p-home-kv__engText">g</span>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+               <div class="p-home-kv__text-slider-slide swiper-slide">
+                 <div class="p-home-kv__text-slider-text slide-img">
+                   <div class="p-home-kv__text-slider-text-eng js-slider-text">
+                     <div class="p-home-kv__engWrap -housing">
+                       <span class="p-home-kv__engText">H</span>
+                       <span class="p-home-kv__engText">o</span>
+                       <span class="p-home-kv__engText">u</span>
+                       <span class="p-home-kv__engText">s</span>
+                       <span class="p-home-kv__engText">i</span>
+                       <span class="p-home-kv__engText">n</span>
+                       <span class="p-home-kv__engText">g</span>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <!-- swiper-container-text -->
+           <div class="p-home-kv__text-wrapper">
+             <h2 class="p-home-kv__title">
+               How Far<br />
+               Can We Go?
+             </h2>
+             <h3 class="p-home-kv__subtitle"></h3>
+             <p class="p-home-kv__desc">
+               「どこまでいけるか」<br />
+               お客さまと挑戦し続ける未来を築いていきます。
+             </p>
+           </div>
+         </div>
+         <!-- Slider main container -->
+       </section>
+     </main>
      <!-- /main -->
      <!-- footer -->
      <footer class="l-footer">
@@ -179,7 +281,7 @@
      <!-- polyfill(picture IE) -->
      <script src="https://polyfill.io/v3/polyfill.min.js?features=HTMLPictureElement"></script>
      <!-- swiper.min.js -->
-     <!-- <script src="./assets/js/swiper.min.js"></script> -->
+     <script src="./assets/js/swiper.min.js"></script>
      <!-- slick.min.js -->
      <!-- <script src="./assets/js/slick.min.js"></script> -->
      <!-- jquery -->
