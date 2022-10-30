@@ -5,3 +5,4 @@ const $ = jQuery;
 // require("./modules/mvHeight");
 require("./modules/subMenu");
 require("./modules/headerScroll");
+require("./modules/kvSlider");

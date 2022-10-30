@@ -1,6 +1,7 @@
 @use "./../foundation/global" as *;
 
 .l-header {
+  z-index: 100;
   padding-inline: 40px;
   padding-top: 40px;
 

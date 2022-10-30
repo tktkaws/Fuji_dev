@@ -6,7 +6,118 @@
     <div id="top" class="wrap" ontouchstart="">
       <%- include('./common/_header', {pageId:pageId }) %>
       <!-- main -->
-      <main class="l-main"></main>
+      <main class="l-main">
+        <section class="p-home-kv">
+          <div class="p-home-kv__grid-wrapper">
+            <!-- swiper-container -->
+            <div class="p-home-kv__swiper-container">
+              <div class="swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img
+                      src="<%= path %>assets/images/home/slider01.jpg"
+                      alt="slider01"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="<%= path %>assets/images/home/slider02.jpg"
+                      alt="slider02"
+                    />
+                  </div>
+                  <div class="swiper-slide">
+                    <img
+                      src="<%= path %>assets/images/home/slider03.jpg"
+                      alt="slider03"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- swiper-container-text -->
+            <div class="p-home-kv__text-slider-container swiper-container-text">
+              <div class="p-home-kv__text-slider-wrapper swiper-wrapper">
+                <div class="p-home-kv__text-slider-slide swiper-slide">
+                  <div class="p-home-kv__text-slider-text slide-img">
+                    <div class="p-home-kv__text-slider-text-eng js-slider-text">
+                      <div class="p-home-kv__engWrap --archi">
+                        <span class="p-home-kv__engText">A</span>
+                        <span class="p-home-kv__engText">r</span>
+                        <span class="p-home-kv__engText">c</span>
+                        <span class="p-home-kv__engText">h</span>
+                        <span class="p-home-kv__engText">i</span>
+                        <span class="p-home-kv__engText">t</span>
+                        <span class="p-home-kv__engText">e</span>
+                        <span class="p-home-kv__engText">c</span>
+                        <span class="p-home-kv__engText">t</span>
+                        <span class="p-home-kv__engText">u</span>
+                        <span class="p-home-kv__engText">r</span>
+                        <span class="p-home-kv__engText">e</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="p-home-kv__text-slider-slide swiper-slide">
+                  <div class="p-home-kv__text-slider-text slide-img">
+                    <div class="p-home-kv__text-slider-text-eng js-slider-text">
+                      <div class="p-home-kv__engWrap --civil">
+                        <span class="p-home-kv__engText">C</span>
+                        <span class="p-home-kv__engText">i</span>
+                        <span class="p-home-kv__engText">v</span>
+                        <span class="p-home-kv__engText">i</span>
+                        <span class="p-home-kv__engText">l</span>
+                        <span class="p-home-kv__engText">&nbsp;</span>
+                        <span class="p-home-kv__engText">E</span>
+                        <span class="p-home-kv__engText">n</span>
+                        <span class="p-home-kv__engText">g</span>
+                        <span class="p-home-kv__engText">i</span>
+                        <span class="p-home-kv__engText">n</span>
+                        <span class="p-home-kv__engText">e</span>
+                        <span class="p-home-kv__engText">e</span>
+                        <span class="p-home-kv__engText">r</span>
+                        <span class="p-home-kv__engText">i</span>
+                        <span class="p-home-kv__engText">n</span>
+                        <span class="p-home-kv__engText">g</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="p-home-kv__text-slider-slide swiper-slide">
+                  <div class="p-home-kv__text-slider-text slide-img">
+                    <div class="p-home-kv__text-slider-text-eng js-slider-text">
+                      <div class="p-home-kv__engWrap -housing">
+                        <span class="p-home-kv__engText">H</span>
+                        <span class="p-home-kv__engText">o</span>
+                        <span class="p-home-kv__engText">u</span>
+                        <span class="p-home-kv__engText">s</span>
+                        <span class="p-home-kv__engText">i</span>
+                        <span class="p-home-kv__engText">n</span>
+                        <span class="p-home-kv__engText">g</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- swiper-container-text -->
+            <div class="p-home-kv__text-wrapper">
+              <h2 class="p-home-kv__title">
+                How Far<br />
+                Can We Go?
+              </h2>
+              <h3 class="p-home-kv__subtitle"></h3>
+              <p class="p-home-kv__desc">
+                「どこまでいけるか」<br />
+                お客さまと挑戦し続ける未来を築いていきます。
+              </p>
+            </div>
+          </div>
+
+          <!-- Slider main container -->
+        </section>
+      </main>
       <!-- /main -->
       <%- include('./common/_footer', {pageId:pageId }) %> <%-
       include('./common/_script', {pageId:pageId }) %> <%-
