@@ -22,6 +22,8 @@
    <script src="https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js" integrity="sha384-xRa5B8rCDfdg0npZcxAh+RXswrbFk3g6dlHVeABeluN8EIwdyljz/LqJgc2R3KNA" crossorigin="anonymous" defer></script>
    <!-- ファイルからの読み込みに切り替える -->
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
  </head>
  <body class="home">
@@ -182,6 +184,7 @@
                </div>
              </div>
            </div>
+           <!-- swiper-container -->
            <!-- swiper-container-text -->
            <div class="p-home-kv__text-slider-container swiper-container-text">
              <div class="p-home-kv__text-slider-wrapper swiper-wrapper">
@@ -259,9 +262,16 @@
                お客さまと挑戦し続ける未来を築いていきます。
              </p>
            </div>
+           <!-- scroll-animation -->
+           <div class="p-scroll"></div>
          </div>
-         <!-- Slider main container -->
        </section>
+       <div class="l-overlay"></div>
+       <div class="js-trigger-section">
+         <secton class="sample-section">
+           <img src="./assets/images/home/slider01.jpg" alt="slider01" />
+         </secton>
+       </div>
      </main>
      <!-- /main -->
      <!-- footer -->
