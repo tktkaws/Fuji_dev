@@ -5,6 +5,7 @@
   //   display: grid;
   //   grid-template-columns: $size5 600px $size4 400px $size5;
   // }
+  background-color: $c-white;
   &__inner {
     display: flex;
     flex-direction: row-reverse;
