@@ -1,4 +1,65 @@
-@use "./../foundation/variable" as *;
+@use "./../foundation/global" as *;
 
 .l-footer {
+  background-color: $c-base;
+  color: $c-white;
+
+  &__logo {
+  }
+  &__inner {
+    padding: $size5;
+  }
+  &__main {
+    margin-top: 5rem;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__policy {
+    margin-top: 5rem;
+    text-align: right;
+    small {
+      margin-left: 5rem;
+    }
+  }
+  &__address {
+    line-height: 1.8em;
+  }
+  &__menu {
+  }
+  &__list {
+    display: flex;
+    flex-flow: row wrap;
+    width: 300px;
+    margin-left: 1rem;
+  }
+  &__item {
+    padding: 2rem;
+    width: 150px;
+    position: relative;
+    padding-left: 1rem;
+    text-transform: uppercase;
+    &:before {
+      content: "";
+      width: 0.5rem;
+      height: 0.5rem;
+      background: $c-main;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 2.7rem;
+    }
+  }
+  &__arrow {
+    margin-top: 5rem;
+    text-align: right;
+    padding-right: 5rem;
+  }
+  &__ {
+  }
+  &__ {
+  }
+  &__ {
+  }
+  &__ {
+  }
 }
