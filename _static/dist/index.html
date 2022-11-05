@@ -22,6 +22,7 @@
    <script src="https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js" integrity="sha384-xRa5B8rCDfdg0npZcxAh+RXswrbFk3g6dlHVeABeluN8EIwdyljz/LqJgc2R3KNA" crossorigin="anonymous" defer></script>
    <!-- ファイルからの読み込みに切り替える -->
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+   <!-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script> -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
@@ -421,10 +422,29 @@
              </ul>
            </div>
          </section>
-         <section class="p-home-works"></section>
-         <section class="p-home-news"></section>
-         <section class="p-home-parallax"></section>
-         <section class="p-home-recruit"></section>
+         <section class="p-home-works">
+           <div class="p-home-works__inner">
+             <div class="c-heading">
+               <!-- c-heading -->
+               <h2 class="c-heading__title">Works</h2>
+               <div class="c-heading__subtitle">施工実績</div>
+             </div>
+             <!-- c-heading -->
+             <div class="c-text-loop">
+               <div class="c-text-loop__textWrap">
+                 <div class="c-text-loop__text">
+                   <span>our works</span>
+                 </div>
+               </div>
+               <div class="c-text-loop__link">
+                 <a href="">
+                   <div class="c-text-loop__link-text">View More</div>
+                   <div class="c-arrow c-arrow--round"></div>
+                 </a>
+               </div>
+             </div>
+           </div>
+         </section>
        </div>
      </main>
      <!-- /main -->
@@ -437,6 +457,8 @@
      </footer>
      <!-- /footer -->
      <!-- script -->
+     <!-- splide.min.js -->
+     <script src="./assets/js/splide.min.js"></script>
      <!-- common.bundle.js -->
      <script src="./assets/js/common.bundle.js"></script>
      <!-- IE object-fit -->

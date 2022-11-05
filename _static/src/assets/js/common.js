@@ -7,3 +7,4 @@ require("./modules/subMenu");
 require("./modules/headerScroll");
 require("./modules/kvSlider");
 require("./modules/kvOverlay");
+require("./modules/worksSlider");
