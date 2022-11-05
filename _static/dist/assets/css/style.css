@@ -1537,6 +1537,17 @@ th {
   border: solid 1px;
 }
 
+.p-home-recruit {
+  background-color: #dad2c6;
+}
+.p-home-recruit__inner {
+  display: -webkit-box;
+  display: flex;
+  padding-top: 8.1%;
+  padding-inline: 13.5%;
+  gap: 27%;
+}
+
 .u-inline-block {
   display: inline-block;
 }

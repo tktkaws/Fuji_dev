@@ -8,3 +8,4 @@ require("./modules/headerScroll");
 require("./modules/kvSlider");
 require("./modules/kvOverlay");
 require("./modules/worksSlider");
+require("./modules/parallaxImg");
