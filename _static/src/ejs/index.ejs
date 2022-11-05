@@ -123,21 +123,27 @@
           <section class="p-home-about">
             <div class="p-home-about__inner">
               <div class="p-home-about__text-container">
-                <div class="p-home-about__text-wrapper">
-                  <h2 class="p-home-about__title">About</h2>
-                  <h3 class="p-home-about__subtitle">会社情報</h3>
-                  <p class="p-home-about__desc">
+                <!-- c-heading -->
+                <div class="c-heading">
+                  <h2 class="c-heading__title">About</h2>
+                  <div class="c-heading__subtitle">会社情報</div>
+                </div>
+                <!-- c-heading -->
+                <!-- c-desc -->
+                <div class="c-desc">
+                  <div class="c-desc__text">
                     これまでの実績を築き上げてきた挑戦と経験を、未来のお客さまへ繋いでいくことをテーマにして日々のお仕事に励んでいます。
                     <br />
                     「過去と未来を繋ぎ続ける」そんな会社を目指す技術集団が、藤原建設工業です。
-                  </p>
-                  <div class="p-home-about__link">
+                  </div>
+                  <div class="c-desc__link">
                     <a href="">
-                      <div class="p-home-about__link-text">View More</div>
+                      <div class="c-desc__link-text">View More</div>
                       <div class="c-arrow c-arrow--round"></div>
                     </a>
                   </div>
                 </div>
+                <!-- c-desc -->
               </div>
               <figure class="p-home-about__image">
                 <img
@@ -162,12 +168,114 @@
               playsinline
             ></video>
           </section>
+          <section class="p-home-service">
+            <div class="p-home-service__inner">
+              <div class="p-home-service__heading">
+                <!-- c-heading -->
+                <div class="c-heading">
+                  <h2 class="c-heading__title">Service</h2>
+                  <div class="c-heading__subtitle">事業内容</div>
+                </div>
+                <!-- c-heading -->
+                <!-- c-desc -->
+                <div class="c-desc">
+                  <div class="c-desc__text">
+                    藤原建設工業では「建築事業」「土木事業」「住宅事業」の3つの事業を通してお客さまのお手伝いをさせていただいております。
+                    <br />
+                    事業内容ページでは、3つの柱をより具体的にご紹介します。
+                  </div>
+                  <div class="c-desc__link">
+                    <a href="">
+                      <div class="c-desc__link-text">View More</div>
+                      <div class="c-arrow c-arrow--round"></div>
+                    </a>
+                  </div>
+                </div>
+                <!-- c-desc -->
+              </div>
+              <div class="p-home-service__card-container">
+                <ul class="p-home-service__cards">
+                  <li class="p-home-service__card">
+                    <a href="" class="p-home-service__link">
+                      <figure class="p-home-service__card-image">
+                        <img
+                          src="<%= path %>assets/images/home/service01.jpg"
+                          alt="建築事業"
+                        />
+                      </figure>
+                      <div class="p-home-service__card-title">
+                        <span class="eng">Architecture</span><br />
+                        <span>建築事業</span>
+                      </div>
+                      <div class="p-home-service__card-deco --archi">
+                        <div class="p-home-service__card-deco-text">
+                          View more
+                        </div>
+                        <div class="c-arrow c-arrow--round"></div>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="p-home-service__card">
+                    <a href="" class="p-home-service__link">
+                      <figure class="p-home-service__card-image">
+                        <img
+                          src="<%= path %>assets/images/home/service02.jpg"
+                          alt="土木事業"
+                        />
+                      </figure>
+                      <div class="p-home-service__card-title">
+                        <span class="eng">Civil engineering</span><br />
+                        <span>土木事業</span>
+                      </div>
+                      <div class="p-home-service__card-deco --civil">
+                        <div class="p-home-service__card-deco-text">
+                          View more
+                        </div>
+                        <div class="c-arrow c-arrow--round"></div>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="p-home-service__card">
+                    <a href="" class="p-home-service__link">
+                      <figure class="p-home-service__card-image">
+                        <img
+                          src="<%= path %>assets/images/home/service03.jpg"
+                          alt="住宅事業"
+                        />
+                      </figure>
+                      <div class="p-home-service__card-title">
+                        <span class="eng">Housing</span><br />
+                        <span>住宅事業</span>
+                      </div>
+                      <div class="p-home-service__card-deco --housing">
+                        <div class="p-home-service__card-deco-text">
+                          View more
+                        </div>
+                        <div class="c-arrow c-arrow--round"></div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+          <section class="p-home-loop"></section>
+          <section class="p-home-works"></section>
+          <section class="p-home-news"></section>
+          <section class="p-home-parallax"></section>
+          <section class="p-home-recruit"></section>
         </div>
       </main>
       <!-- /main -->
-      <%- include('./common/_footer', {pageId:pageId }) %> <%-
-      include('./common/_script', {pageId:pageId }) %> <%-
-      include('./common/script/_script-top', {pageId:pageId }) %>
+      <!-- footer -->
+      <%- include('./common/_footer', {pageId:pageId }) %>
+      <!-- script -->
+      <%- include('./common/_script', {pageId:pageId }) %>
+      <!-- script -->
+      <%- include('./common/script/_script-top', {pageId:pageId }) %>
+      <!-- script -->
     </div>
   </body>
 </html>
