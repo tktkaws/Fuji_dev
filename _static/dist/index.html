@@ -6,8 +6,8 @@
    <meta name="format-detection" content="email=no, telephone=no, address=no" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <meta name="robots" content="noindex,nofollow" />
-   <title>テンプレート（画像圧縮あり）</title>
-   <meta name="description" content="サイトの説明" />
+   <title>藤原建設工業株式会社</title>
+   <meta name="description" content="「過去と未来を繋ぎ続ける」そんな会社を目指す技術集団が、藤原建設工業です。" />
    <meta name="keywords" content="" />
    <link rel="canonical" href="./" />
    <!-- favicon -->
@@ -15,67 +15,728 @@
    <!-- apple-touch-icon -->
    <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/favicon/apple-touch-icon.png" />
    <!-- font -->
+   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet" />
    <!-- style.css -->
    <link rel="stylesheet" href="./assets/css/style.css" />
    <!-- Remove "outline" when in focus(other than keyboard operation) -->
    <script src="https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js" integrity="sha384-xRa5B8rCDfdg0npZcxAh+RXswrbFk3g6dlHVeABeluN8EIwdyljz/LqJgc2R3KNA" crossorigin="anonymous" defer></script>
+   <!-- ファイルからの読み込みに切り替える -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
  </head>
  <body class="home">
    <div id="top" class="wrap" ontouchstart="">
-     <li class="l-menu__item js-submenu-trigger">
-       <a href="./works" class="l-menu__link">WORKS</a>
-       <div class="l-menu-sub js-submenu is-none">
-         <div class="l-menu-sub__inner">
-           <figure>
-             <picture>
-               <source srcset="./assets/images/common/submenu_img01.webp" type="image/webp" />
-               <img src="./assets/images/common/submenu_img01.jpg" alt="" />
-             </picture>
-           </figure>
-           <ul class="l-menu-sub__list">
-             <li class="l-menu-sub__item">
-               <a href="" class="l-menu-sub__link">
-                 <div class="l-menu-sub__linkTitle">
-                   <span class="eng">Architecture</span>
-                   <span>建築事業</span>
-                 </div>
-                 <span class="arrow"></span>
-               </a>
+     <header class="l-header" id="js-top">
+       <div class="l-header__inner">
+         <figure class="l-header__logo">
+           <a href="">
+             <img src="./assets/images/common/logo.svg" alt="ロゴ" />
+           </a>
+         </figure>
+         <nav class="l-header__nav">
+           <ul class="l-header__menu js-hide">
+             <li class="l-header__menu-item">
+               <a href="" class="l-header__menu-link"> top </a>
              </li>
-             <li class="l-menu-sub__item">
-               <a href="" class="l-menu-sub__link">
-                 <div class="l-menu-sub__linkTitle">
-                   <span class="eng">Civil engineering</span>
-                   <span>土木事業</span>
-                 </div>
-                 <span class="arrow"></span>
-               </a>
+             <li class="l-header__menu-item">
+               <a href="" class="l-header__menu-link"> company </a>
              </li>
-             <li class="l-menu-sub__item">
-               <a href="" class="l-menu-sub__link">
-                 <div class="l-menu-sub__linkTitle">
-                   <span class="eng">Housing</span>
-                   <span>住宅事業</span>
-                 </div>
-                 <span class="arrow"></span>
+             <li class="l-header__menu-item">
+               <a href="" class="l-header__menu-link"> service </a>
+             </li>
+             <li class="l-header__menu-item js-submenu-trigger">
+               <a href="" class="l-header__menu-link">
+                 works<span class="c-arrow-bottom"> </span>
                </a>
+               <!-- submenu -->
+               <div class="l-header__submenu js-submenu is-none">
+                 <div class="l-header__submenu-inner">
+                   <figure class="l-header__submenu-image">
+                     <img src="./assets/images/common/submenu.jpg" alt="サブメニュー" />
+                   </figure>
+                   <ul class="l-header__submenu-list">
+                     <li class="l-header__submenu-item">
+                       <a href="" class="l-header__submenu-link">
+                         <div class="l-header__submenu-title">
+                           <span class="eng">Architecture</span><br />
+                           <span>建築事業</span>
+                         </div>
+                         <div class="c-arrow c-arrow--round"></div>
+                       </a>
+                     </li>
+                     <li class="l-header__submenu-item">
+                       <a href="" class="l-header__submenu-link">
+                         <div class="l-header__submenu-title">
+                           <span class="eng">Civil engineering</span><br />
+                           <span>土木事業</span>
+                         </div>
+                         <div class="c-arrow c-arrow--round"></div>
+                       </a>
+                     </li>
+                     <li class="l-header__submenu-item">
+                       <a href="" class="l-header__submenu-link">
+                         <div class="l-header__submenu-title">
+                           <span class="eng">Housing</span><br />
+                           <span>住宅事業</span>
+                         </div>
+                         <div class="c-arrow c-arrow--round"></div>
+                       </a>
+                     </li>
+                   </ul>
+                 </div>
+               </div>
+             </li>
+             <!-- submenu -->
+             <li class="l-header__menu-item">
+               <a href="" class="l-header__menu-link"> news </a>
              </li>
            </ul>
-         </div>
+           <!-- btn -->
+           <button class="c-btn">
+             <a href="" class="c-btn__link"> recruit </a>
+           </button>
+           <button class="c-btn--accent">
+             <a href="" class="c-btn__link"> contact </a>
+           </button>
+           <!-- btn -->
+         </nav>
+         <!-- hamburger-btn -->
+         <button class="l-header__hamburger-btn" onClick="document.querySelector('body').classList.toggle('open')">
+           <span class="l-header__hamburger-btn-bar"></span>
+           <span class="l-header__sr-only">MENU</span>
+         </button>
+         <!-- hamburger-btn -->
        </div>
-     </li>
+       <!-- mobile-nav -->
+       <nav class="l-mobile-nav">
+         <ul class="l-mobile-nav__menu">
+           <li class="l-mobile-nav__menu-item">
+             <a href="" class="l-mobile-nav__link">top </a>
+           </li>
+           <li class="l-mobile-nav__menu-item">
+             <a href="" class="l-mobile-nav__link">company </a>
+           </li>
+           <li class="l-mobile-nav__menu-item">
+             <a href="" class="l-mobile-nav__link">service </a>
+           </li>
+           <li class="l-mobile-nav__menu-item">
+             <a href="" class="l-mobile-nav__link">works </a>
+             <ul class="l-mobile-nav__submenu">
+               <li class="l-mobile-nav__submenu-item">
+                 <a href="" class="l-mobile-nav__link">建築事業 </a>
+               </li>
+               <li class="l-mobile-nav__submenu-item">
+                 <a href="" class="l-mobile-nav__link">土木事業 </a>
+               </li>
+               <li class="l-mobile-nav__submenu-item">
+                 <a href="" class="l-mobile-nav__link">住宅事業 </a>
+               </li>
+             </ul>
+           </li>
+           <li class="l-mobile-nav__menu-item">
+             <a href="" class="l-mobile-nav__link">news </a>
+           </li>
+         </ul>
+         <div class="l-mobile-nav__btn-wrapper">
+           <button class="c-btn">
+             <a href="" class="c-btn__link"> recruit </a>
+           </button>
+           <button class="c-btn--accent">
+             <a href="" class="c-btn__link"> contact </a>
+           </button>
+         </div>
+         <div class="l-mobile-nav__info">
+           <div class="l-mobile-nav__subtitle">Access</div>
+           <address class="l-mobile-nav__address">
+             藤原建設工業株式会社 本社<br />
+             〒000-0000 千葉県◯◯市◯◯丁目◯◯番<br />
+             TEL 00-0000-0000
+           </address>
+         </div>
+         <div class="l-mobile-nav__info">
+           <div class="l-mobile-nav__subtitle">Privacy Policy</div>
+           <small class="l-mobile-nav__policy">
+             © 1995 Fujiwara Construction Industry. Co., Ltd.
+           </small>
+         </div>
+       </nav>
+       <!-- mobile-nav -->
+     </header>
      <!-- main -->
      <main class="l-main">
-       <p class="test02">test02</p>
+       <section class="p-home-kv">
+         <div class="p-home-kv__grid-wrapper">
+           <!-- swiper-container -->
+           <div class="p-home-kv__swiper-container">
+             <div class="swiper">
+               <div class="swiper-wrapper">
+                 <div class="swiper-slide">
+                   <img src="./assets/images/home/slider01.jpg" alt="slider01" />
+                 </div>
+                 <div class="swiper-slide">
+                   <img src="./assets/images/home/slider02.jpg" alt="slider02" />
+                 </div>
+                 <div class="swiper-slide">
+                   <img src="./assets/images/home/slider03.jpg" alt="slider03" />
+                 </div>
+               </div>
+             </div>
+           </div>
+           <!-- swiper-container -->
+           <!-- swiper-container-text -->
+           <div class="p-home-kv__text-slider-container swiper-container-text">
+             <div class="p-home-kv__text-slider-wrapper swiper-wrapper">
+               <div class="p-home-kv__text-slider-slide swiper-slide">
+                 <div class="p-home-kv__text-slider-text slide-img">
+                   <div class="p-home-kv__text-slider-text-eng js-slider-text">
+                     <div class="p-home-kv__engWrap --archi">
+                       <span class="p-home-kv__engText">A</span>
+                       <span class="p-home-kv__engText">r</span>
+                       <span class="p-home-kv__engText">c</span>
+                       <span class="p-home-kv__engText">h</span>
+                       <span class="p-home-kv__engText">i</span>
+                       <span class="p-home-kv__engText">t</span>
+                       <span class="p-home-kv__engText">e</span>
+                       <span class="p-home-kv__engText">c</span>
+                       <span class="p-home-kv__engText">t</span>
+                       <span class="p-home-kv__engText">u</span>
+                       <span class="p-home-kv__engText">r</span>
+                       <span class="p-home-kv__engText">e</span>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+               <div class="p-home-kv__text-slider-slide swiper-slide">
+                 <div class="p-home-kv__text-slider-text slide-img">
+                   <div class="p-home-kv__text-slider-text-eng js-slider-text">
+                     <div class="p-home-kv__engWrap --civil">
+                       <span class="p-home-kv__engText">C</span>
+                       <span class="p-home-kv__engText">i</span>
+                       <span class="p-home-kv__engText">v</span>
+                       <span class="p-home-kv__engText">i</span>
+                       <span class="p-home-kv__engText">l</span>
+                       <span class="p-home-kv__engText">&nbsp;</span>
+                       <span class="p-home-kv__engText">E</span>
+                       <span class="p-home-kv__engText">n</span>
+                       <span class="p-home-kv__engText">g</span>
+                       <span class="p-home-kv__engText">i</span>
+                       <span class="p-home-kv__engText">n</span>
+                       <span class="p-home-kv__engText">e</span>
+                       <span class="p-home-kv__engText">e</span>
+                       <span class="p-home-kv__engText">r</span>
+                       <span class="p-home-kv__engText">i</span>
+                       <span class="p-home-kv__engText">n</span>
+                       <span class="p-home-kv__engText">g</span>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+               <div class="p-home-kv__text-slider-slide swiper-slide">
+                 <div class="p-home-kv__text-slider-text slide-img">
+                   <div class="p-home-kv__text-slider-text-eng js-slider-text">
+                     <div class="p-home-kv__engWrap -housing">
+                       <span class="p-home-kv__engText">H</span>
+                       <span class="p-home-kv__engText">o</span>
+                       <span class="p-home-kv__engText">u</span>
+                       <span class="p-home-kv__engText">s</span>
+                       <span class="p-home-kv__engText">i</span>
+                       <span class="p-home-kv__engText">n</span>
+                       <span class="p-home-kv__engText">g</span>
+                     </div>
+                   </div>
+                 </div>
+               </div>
+             </div>
+           </div>
+           <!-- swiper-container-text -->
+           <div class="p-home-kv__text-wrapper">
+             <h2 class="p-home-kv__title">
+               How Far<br />
+               Can We Go?
+             </h2>
+             <h3 class="p-home-kv__subtitle"></h3>
+             <p class="p-home-kv__desc">
+               「どこまでいけるか」<br />
+               お客さまと挑戦し続ける未来を築いていきます。
+             </p>
+           </div>
+           <!-- scroll-animation -->
+           <div class="p-scroll"></div>
+         </div>
+       </section>
+       <div class="l-overlay"></div>
+       <div class="js-trigger-section">
+         <section class="p-home-about">
+           <div class="p-home-about__inner">
+             <div class="p-home-about__text-container">
+               <!-- c-heading -->
+               <div class="c-heading">
+                 <h2 class="c-heading__title">About</h2>
+                 <div class="c-heading__subtitle">会社情報</div>
+               </div>
+               <!-- c-heading -->
+               <!-- c-desc -->
+               <div class="c-desc">
+                 <div class="c-desc__text">
+                   これまでの実績を築き上げてきた挑戦と経験を、未来のお客さまへ繋いでいくことをテーマにして日々のお仕事に励んでいます。
+                   <br />
+                   「過去と未来を繋ぎ続ける」そんな会社を目指す技術集団が、藤原建設工業です。
+                 </div>
+                 <div class="c-desc__link">
+                   <a href="">
+                     <div class="c-desc__link-text">View More</div>
+                     <div class="c-arrow c-arrow--round"></div>
+                   </a>
+                 </div>
+               </div>
+               <!-- c-desc -->
+             </div>
+             <figure class="p-home-about__image">
+               <img src="./assets/images/home/home_about.jpg" alt="about" />
+             </figure>
+           </div>
+         </section>
+         <section class="p-home-movie">
+           <video id="js-video" class="p-home-movie__video" src="assets/images/video/fujiwara_movie.mp4" poster="assets/images/video/video_poster.webp" width="100%" height="auto" loop autoplay muted playsinline></video>
+         </section>
+         <section class="p-home-service">
+           <div class="p-home-service__inner">
+             <div class="p-home-service__heading">
+               <!-- c-heading -->
+               <div class="c-heading">
+                 <h2 class="c-heading__title">Service</h2>
+                 <div class="c-heading__subtitle">事業内容</div>
+               </div>
+               <!-- c-heading -->
+               <!-- c-desc -->
+               <div class="c-desc">
+                 <div class="c-desc__text">
+                   藤原建設工業では「建築事業」「土木事業」「住宅事業」の3つの事業を通してお客さまのお手伝いをさせていただいております。
+                   <br />
+                   事業内容ページでは、3つの柱をより具体的にご紹介します。
+                 </div>
+                 <div class="c-desc__link">
+                   <a href="">
+                     <div class="c-desc__link-text">View More</div>
+                     <div class="c-arrow c-arrow--round"></div>
+                   </a>
+                 </div>
+               </div>
+               <!-- c-desc -->
+             </div>
+             <div class="p-home-service__card-container">
+               <ul class="p-home-service__cards">
+                 <li class="p-home-service__card">
+                   <a href="" class="p-home-service__link">
+                     <figure class="p-home-service__card-image">
+                       <img src="./assets/images/home/service01.jpg" alt="建築事業" />
+                     </figure>
+                     <div class="p-home-service__card-title">
+                       <span class="eng">Architecture</span><br />
+                       <span>建築事業</span>
+                     </div>
+                     <div class="p-home-service__card-deco --archi">
+                       <div class="p-home-service__card-deco-text">
+                         View more
+                       </div>
+                       <div class="c-arrow c-arrow--round"></div>
+                     </div>
+                   </a>
+                 </li>
+                 <li class="p-home-service__card">
+                   <a href="" class="p-home-service__link">
+                     <figure class="p-home-service__card-image">
+                       <img src="./assets/images/home/service02.jpg" alt="土木事業" />
+                     </figure>
+                     <div class="p-home-service__card-title">
+                       <span class="eng">Civil engineering</span><br />
+                       <span>土木事業</span>
+                     </div>
+                     <div class="p-home-service__card-deco --civil">
+                       <div class="p-home-service__card-deco-text">
+                         View more
+                       </div>
+                       <div class="c-arrow c-arrow--round"></div>
+                     </div>
+                   </a>
+                 </li>
+                 <li class="p-home-service__card">
+                   <a href="" class="p-home-service__link">
+                     <figure class="p-home-service__card-image">
+                       <img src="./assets/images/home/service03.jpg" alt="住宅事業" />
+                     </figure>
+                     <div class="p-home-service__card-title">
+                       <span class="eng">Housing</span><br />
+                       <span>住宅事業</span>
+                     </div>
+                     <div class="p-home-service__card-deco --housing">
+                       <div class="p-home-service__card-deco-text">
+                         View more
+                       </div>
+                       <div class="c-arrow c-arrow--round"></div>
+                     </div>
+                   </a>
+                 </li>
+               </ul>
+             </div>
+           </div>
+         </section>
+         <section class="p-home-loop">
+           <div class="p-home-loop__list">
+             <ul class="p-home-loop__itemWrap">
+               <li class="p-home-loop__item">
+                 <img src="./assets/images/home/home_slider_img01.jpg" alt="" />
+               </li>
+               <li class="p-home-loop__item">
+                 <img src="./assets/images/home/home_slider_img02.jpg" alt="" />
+               </li>
+               <li class="p-home-loop__item">
+                 <img src="./assets/images/home/home_slider_img03.jpg" alt="" />
+               </li>
+               <li class="p-home-loop__item">
+                 <img src="./assets/images/home/home_slider_img04.jpg" alt="" />
+               </li>
+               <li class="p-home-loop__item">
+                 <img src="./assets/images/home/home_slider_img05.jpg" alt="" />
+               </li>
+             </ul>
+             <ul class="p-home-loop__itemWrap">
+               <li class="p-home-loop__item">
+                 <img src="./assets/images/home/home_slider_img01.jpg" alt="" />
+               </li>
+               <li class="p-home-loop__item">
+                 <img src="./assets/images/home/home_slider_img02.jpg" alt="" />
+               </li>
+               <li class="p-home-loop__item">
+                 <img src="./assets/images/home/home_slider_img03.jpg" alt="" />
+               </li>
+               <li class="p-home-loop__item">
+                 <img src="./assets/images/home/home_slider_img04.jpg" alt="" />
+               </li>
+               <li class="p-home-loop__item">
+                 <img src="./assets/images/home/home_slider_img05.jpg" alt="" />
+               </li>
+             </ul>
+           </div>
+         </section>
+         <section class="p-home-works">
+           <div class="p-home-works__inner">
+             <!-- c-heading -->
+             <div class="c-heading">
+               <h2 class="c-heading__title">Works</h2>
+               <div class="c-heading__subtitle">施工実績</div>
+             </div>
+             <!-- c-heading -->
+             <!-- splide -->
+             <div id="js-slider-works" class="p-home-works__sliderContainer splide" aria-labelledby="施工実績">
+               <div class="p-home-works__sliderTrack splide__track">
+                 <ul class="p-home-works__sliderWrapper splide__list">
+                   <!-- スライダーのコンテンツ -->
+                   <li class="p-home-works__slide splide__slide">
+                     <a href="" class="p-home-works__slideLink">
+                       <div class="p-home-works__item slide-img">
+                         <figure>
+                           <img src="assets/images/home/works_img01.jpg" alt="" />
+                           <span class="p-home-works__itemTag -archi">建築</span>
+                         </figure>
+                         <div class="p-home-works__info">
+                           <h3 class="p-home-works__title">◯◯ビル工事</h3>
+                           <time>2022.02.24</time>
+                         </div>
+                       </div>
+                     </a>
+                   </li>
+                   <li class="p-home-works__slide splide__slide">
+                     <a href="" class="p-home-works__slideLink">
+                       <div class="p-home-works__item slide-img">
+                         <figure>
+                           <img src="assets/images/home/works_img01.jpg" alt="" />
+                           <span class="p-home-works__itemTag -archi">建築</span>
+                         </figure>
+                         <div class="p-home-works__info">
+                           <h3 class="p-home-works__title">◯◯ビル工事</h3>
+                           <time>2022.02.24</time>
+                         </div>
+                       </div>
+                     </a>
+                   </li>
+                   <li class="p-home-works__slide splide__slide">
+                     <a href="" class="p-home-works__slideLink">
+                       <div class="p-home-works__item slide-img">
+                         <figure>
+                           <img src="assets/images/home/works_img01.jpg" alt="" />
+                           <span class="p-home-works__itemTag -archi">建築</span>
+                         </figure>
+                         <div class="p-home-works__info">
+                           <h3 class="p-home-works__title">◯◯ビル工事</h3>
+                           <time>2022.02.24</time>
+                         </div>
+                       </div>
+                     </a>
+                   </li>
+                   <li class="p-home-works__slide splide__slide">
+                     <a href="" class="p-home-works__slideLink">
+                       <div class="p-home-works__item slide-img">
+                         <figure>
+                           <img src="assets/images/home/works_img01.jpg" alt="" />
+                           <span class="p-home-works__itemTag -archi">建築</span>
+                         </figure>
+                         <div class="p-home-works__info">
+                           <h3 class="p-home-works__title">◯◯ビル工事</h3>
+                           <time>2022.02.24</time>
+                         </div>
+                       </div>
+                     </a>
+                   </li>
+                   <li class="p-home-works__slide splide__slide">
+                     <a href="" class="p-home-works__slideLink">
+                       <div class="p-home-works__item slide-img">
+                         <figure>
+                           <img src="assets/images/home/works_img01.jpg" alt="" />
+                           <span class="p-home-works__itemTag -archi">建築</span>
+                         </figure>
+                         <div class="p-home-works__info">
+                           <h3 class="p-home-works__title">◯◯ビル工事</h3>
+                           <time>2022.02.24</time>
+                         </div>
+                       </div>
+                     </a>
+                   </li>
+                   <!-- /スライダーのコンテンツ -->
+                 </ul>
+               </div>
+             </div>
+             <!-- splide -->
+             <!-- mouse cursor -->
+             <div id="js-cursor" class="p-cursor"></div>
+             <div id="js-chaser" class="p-chaser">
+               <p class="text">DRAG</p>
+             </div>
+             <!-- /mouse cursor -->
+             <!-- c-text-loop -->
+             <div class="c-text-loop">
+               <div class="c-text-loop__textWrap">
+                 <div class="c-text-loop__text">
+                   <span>our works</span>
+                 </div>
+               </div>
+               <div class="c-text-loop__link">
+                 <a href="">
+                   <div class="c-text-loop__link-text">View More</div>
+                   <div class="c-arrow c-arrow--round"></div>
+                 </a>
+               </div>
+             </div>
+             <!-- c-text-loop -->
+           </div>
+         </section>
+         <section class="p-home-news">
+           <div class="p-home-news__inner">
+             <!-- c-heading -->
+             <div class="c-heading">
+               <h2 class="c-heading__title">News</h2>
+               <div class="c-heading__subtitle">新着情報</div>
+             </div>
+             <!-- c-heading -->
+             <div class="p-home-news__card-container">
+               <ul class="p-home-news__card-list">
+                 <li class="p-home-news__card">
+                   <a href="">
+                     <figure class="p-home-news__card-image">
+                       <img src="./assets/images/home/news01.jpg" alt="slider01" />
+                     </figure>
+                     <div class="p-home-news__card-text">
+                       <div class="p-home-news__subtext">
+                         <span class="p-home-news__date">2022.02.24</span>
+                         <spaan class="p-home-news__category">お知らせ</spaan>
+                       </div>
+                       <div class="p-home-news__desc">
+                         ダミーテキストです。ダミーテキストです。ダミーテキストです。ダミーテキストです。ダミーテキストです…
+                       </div>
+                     </div>
+                   </a>
+                 </li>
+               </ul>
+               <ul class="p-home-news__card-list">
+                 <li class="p-home-news__card">
+                   <a href="">
+                     <figure class="p-home-news__card-image">
+                       <img src="./assets/images/home/news02.jpg" alt="slider01" />
+                     </figure>
+                     <div class="p-home-news__card-text">
+                       <div class="p-home-news__subtext">
+                         <span class="p-home-news__date">2022.02.24</span>
+                         <spaan class="p-home-news__category">お知らせ</spaan>
+                       </div>
+                       <div class="p-home-news__desc">
+                         ダミーテキストです。ダミーテキストです。ダミーテキストです。ダミーテキストです。ダミーテキストです…
+                       </div>
+                     </div>
+                   </a>
+                 </li>
+               </ul>
+               <ul class="p-home-news__card-list">
+                 <li class="p-home-news__card">
+                   <a href="">
+                     <figure class="p-home-news__card-image">
+                       <img src="./assets/images/home/news03.jpg" alt="slider01" />
+                     </figure>
+                     <div class="p-home-news__card-text">
+                       <div class="p-home-news__subtext">
+                         <span class="p-home-news__date">2022.02.24</span>
+                         <spaan class="p-home-news__category">お知らせ</spaan>
+                       </div>
+                       <div class="p-home-news__desc">
+                         ダミーテキストです。ダミーテキストです。ダミーテキストです。ダミーテキストです。ダミーテキストです…
+                       </div>
+                     </div>
+                   </a>
+                 </li>
+               </ul>
+               <ul class="p-home-news__card-list">
+                 <li class="p-home-news__card">
+                   <a href="">
+                     <figure class="p-home-news__card-image">
+                       <img src="./assets/images/home/news04.jpg" alt="slider01" />
+                     </figure>
+                     <div class="p-home-news__card-text">
+                       <div class="p-home-news__subtext">
+                         <span class="p-home-news__date">2022.02.24</span>
+                         <spaan class="p-home-news__category">お知らせ</spaan>
+                       </div>
+                       <div class="p-home-news__desc">
+                         ダミーテキストです。ダミーテキストです。ダミーテキストです。ダミーテキストです。ダミーテキストです…
+                       </div>
+                     </div>
+                   </a>
+                 </li>
+               </ul>
+               <ul class="p-home-news__card-list">
+                 <li class="p-home-news__card">
+                   <a href="">
+                     <figure class="p-home-news__card-image">
+                       <img src="./assets/images/home/news05.jpg" alt="slider01" />
+                     </figure>
+                     <div class="p-home-news__card-text">
+                       <div class="p-home-news__subtext">
+                         <span class="p-home-news__date">2022.02.24</span>
+                         <spaan class="p-home-news__category">お知らせ</spaan>
+                       </div>
+                       <div class="p-home-news__desc">
+                         ダミーテキストです。ダミーテキストです。ダミーテキストです。ダミーテキストです。ダミーテキストです…
+                       </div>
+                     </div>
+                   </a>
+                 </li>
+               </ul>
+               <div class="c-desc__link">
+                 <a href="">
+                   <div class="c-desc__link-text">View More</div>
+                   <div class="c-arrow c-arrow--round"></div>
+                 </a>
+               </div>
+             </div>
+           </div>
+         </section>
+       </div>
+       <section class="p-home-recruit">
+         <figure class="js-parallax-img">
+           <img src="./assets/images/home/recruit01.jpg" alt="slider01" />
+         </figure>
+         <div class="p-home-recruit__inner">
+           <!-- c-heading -->
+           <div class="c-heading">
+             <h2 class="c-heading__title">Recruit</h2>
+             <div class="c-heading__subtitle">採用情報</div>
+           </div>
+           <!-- c-heading -->
+           <!-- c-desc -->
+           <div class="c-desc">
+             <div class="c-desc__text">
+               藤原建設工業では、各職種にて新卒採用と中途採用を通年行っています。
+               <br />
+               これまで「過去と未来を繋ぎ続ける」に共感していただける仲間たちと歩んできました。
+               <br />
+               一緒に未来を築いていける方とお会いできるのを楽しみにしています。
+             </div>
+             <div class="c-desc__link">
+               <a href="">
+                 <div class="c-desc__link-text">View More</div>
+                 <div class="c-arrow c-arrow--round"></div>
+               </a>
+             </div>
+           </div>
+           <!-- c-desc -->
+         </div>
+         <!-- c-text-loop -->
+         <div class="c-text-loop">
+           <div class="c-text-loop__textWrap">
+             <div class="c-text-loop__text">
+               <span>get in touch</span>
+             </div>
+           </div>
+         </div>
+         <!-- c-text-loop -->
+       </section>
      </main>
      <!-- /main -->
      <!-- footer -->
+     <!-- footer -->
      <footer class="l-footer">
-       <div class="l-container">
-         <div class="l-footer__detail"></div>
+       <div class="l-footer__inner">
+         <figure class="l-footer__logo">
+           <a href="">
+             <img src="./assets/images/common/footer_logo.svg" alt="ロゴ" />
+           </a>
+         </figure>
+         <div class="l-footer__main">
+           <address class="l-footer__address">
+             <span>Access</span><br />
+             <span>藤原建設工業株式会社 本社 </span><br />
+             <span>〒000-0000 東京都◯区◯◯町0-00-00</span><br />
+             <span>TEL 00-0000-0000</span><br />
+           </address>
+           <div class="l-footer__menu">
+             <ul class="l-footer__list">
+               <li class="l-footer__item">
+                 <a href=""> company </a>
+               </li>
+               <li class="l-footer__item">
+                 <a href=""> service </a>
+               </li>
+               <li class="l-footer__item">
+                 <a href=""> works </a>
+               </li>
+               <li class="l-footer__item">
+                 <a href=""> news </a>
+               </li>
+               <li class="l-footer__item">
+                 <a href=""> contact </a>
+               </li>
+               <li class="l-footer__item">
+                 <a href=""> recruit </a>
+               </li>
+             </ul>
+           </div>
+         </div>
+         <div class="l-footer__arrow">
+           <a href="#" class="c-arrow c-arrow--round-top"></a>
+         </div>
+         <div class="l-footer__policy">
+           <a href="">
+             <span> Privacy Policy </span>
+           </a>
+           <small>© 1995 Fujiwara Construction Industry. Co., Ltd.</small>
+         </div>
        </div>
      </footer>
      <!-- /footer -->
+     <!-- script -->
+     <!-- splide.min.js -->
+     <script src="./assets/js/splide.min.js"></script>
      <!-- common.bundle.js -->
      <script src="./assets/js/common.bundle.js"></script>
      <!-- IE object-fit -->
@@ -85,8 +746,9 @@
      </script>
      <!-- polyfill(picture IE) -->
      <script src="https://polyfill.io/v3/polyfill.min.js?features=HTMLPictureElement"></script>
+     <!-- script -->
      <!-- swiper.min.js -->
-     <!-- <script src="./assets/js/swiper.min.js"></script> -->
+     <script src="./assets/js/swiper.min.js"></script>
      <!-- slick.min.js -->
      <!-- <script src="./assets/js/slick.min.js"></script> -->
      <!-- jquery -->
@@ -95,6 +757,7 @@
      <script src="./assets/js/splide.min.js"></script>
      <!-- top.bundle.js -->
      <script src="./assets/js/top.bundle.js"></script>
+     <!-- script -->
    </div>
  </body>
  </html>

@@ -1,23 +1,27 @@
-const webpack = require('webpack');
-const path = require('path');
-const TerserPlugin = require('terser-webpack-plugin');
+const webpack = require("webpack");
+const path = require("path");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   // モード値を production に設定すると最適化された状態で出力される
   // development に設定するとソースマップ有効でJSファイルが出力される
-  mode: 'production',
+  mode: "production",
 
   // メインとなるJavaScriptファイル（エントリーポイント）
   entry: {
-    common: path.join(__dirname, '_static', 'src', 'assets', 'js', 'common.js'),
-    top: path.join(__dirname, '_static', 'src', 'assets', 'js', 'top.js'),
+    common: path.join(__dirname, "_static", "src", "assets", "js", "common.js"),
+    top: path.join(__dirname, "_static", "src", "assets", "js", "top.js"),
+  },
+
+  resolve: {
+    extensions: [".js"], // add your other extensions here
   },
 
   // ファイルの出力設定
   output: {
-    path: path.join(__dirname, '_static', 'dist', 'assets', 'js'),
+    path: path.join(__dirname, "_static", "dist", "assets", "js"),
     // filename: 'bundle.js',
-    filename: '[name].bundle.js', // ファイル名をそのまま保持したい場合
+    filename: "[name].bundle.js", // ファイル名をそのまま保持したい場合
   },
 
   // babel
@@ -29,12 +33,12 @@ module.exports = {
         use: [
           {
             // Babel を利用する
-            loader: 'babel-loader',
+            loader: "babel-loader",
             // Babel のオプションを指定する
             options: {
               presets: [
                 // プリセットを指定することで、ES2020 を ES5 に変換
-                '@babel/preset-env',
+                "@babel/preset-env",
               ],
             },
           },
@@ -43,7 +47,7 @@ module.exports = {
     ],
   },
   // ES5(IE11等)向けの指定
-  target: ['web', 'es5'],
+  target: ["web", "es5"],
 
   optimization: {
     // LICENSE.txtを出力させない

@@ -1,8 +1,51 @@
 <% let path = jsonData.pages[pageId].path %>
 <!-- footer -->
 <footer class="l-footer">
-  <div class="l-container">
-    <div class="l-footer__detail"></div>
+  <div class="l-footer__inner">
+    <figure class="l-footer__logo">
+      <a href="">
+        <img src="<%= path %>assets/images/common/footer_logo.svg" alt="ロゴ" />
+      </a>
+    </figure>
+    <div class="l-footer__main">
+      <address class="l-footer__address">
+        <span>Access</span><br />
+        <span>藤原建設工業株式会社 本社 </span><br />
+        <span>〒000-0000 東京都◯区◯◯町0-00-00</span><br />
+        <span>TEL 00-0000-0000</span><br />
+      </address>
+      <div class="l-footer__menu">
+        <ul class="l-footer__list">
+          <li class="l-footer__item">
+            <a href=""> company </a>
+          </li>
+          <li class="l-footer__item">
+            <a href=""> service </a>
+          </li>
+          <li class="l-footer__item">
+            <a href=""> works </a>
+          </li>
+          <li class="l-footer__item">
+            <a href=""> news </a>
+          </li>
+          <li class="l-footer__item">
+            <a href=""> contact </a>
+          </li>
+          <li class="l-footer__item">
+            <a href=""> recruit </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="l-footer__arrow">
+      <a href="#" class="c-arrow c-arrow--round-top"></a>
+    </div>
+    <div class="l-footer__policy">
+      <a href="">
+        <span> Privacy Policy </span>
+      </a>
+      <small>© 1995 Fujiwara Construction Industry. Co., Ltd.</small>
+    </div>
   </div>
 </footer>
 <!-- /footer -->

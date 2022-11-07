@@ -1,15 +1,16 @@
+@use "./global" as *;
+
 html {
   font-size: 62.5%;
-  line-height: 1.6;
+  line-height: 1.5;
   height: 100%;
   scroll-behavior: smooth;
 }
 
 body {
-  color: #333333;
+  color: $c-black;
   font-size: 1.6rem;
-  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN",
-    "Hiragino Sans", Meiryo, sans-serif;
+  font-family: $f-base;
   min-width: 350px;
   width: 100%;
   overflow-x: hidden;
