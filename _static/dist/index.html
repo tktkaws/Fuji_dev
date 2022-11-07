@@ -22,9 +22,9 @@
    <script src="https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js" integrity="sha384-xRa5B8rCDfdg0npZcxAh+RXswrbFk3g6dlHVeABeluN8EIwdyljz/LqJgc2R3KNA" crossorigin="anonymous" defer></script>
    <!-- ファイルからの読み込みに切り替える -->
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-   <!-- <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.3/dist/js/splide.min.js"></script> -->
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
  </head>
  <body class="home">
@@ -42,7 +42,7 @@
                <a href="" class="l-header__menu-link"> top </a>
              </li>
              <li class="l-header__menu-item">
-               <a href="" class="l-header__menu-link"> companey </a>
+               <a href="" class="l-header__menu-link"> company </a>
              </li>
              <li class="l-header__menu-item">
                <a href="" class="l-header__menu-link"> service </a>
@@ -430,6 +430,92 @@
                <div class="c-heading__subtitle">施工実績</div>
              </div>
              <!-- c-heading -->
+             <!-- splide -->
+             <div id="js-slider-works" class="p-home-works__sliderContainer splide" aria-labelledby="施工実績">
+               <div class="p-home-works__sliderTrack splide__track">
+                 <ul class="p-home-works__sliderWrapper splide__list">
+                   <!-- スライダーのコンテンツ -->
+                   <li class="p-home-works__slide splide__slide">
+                     <a href="" class="p-home-works__slideLink">
+                       <div class="p-home-works__item slide-img">
+                         <figure>
+                           <img src="assets/images/home/works_img01.jpg" alt="" />
+                           <span class="p-home-works__itemTag -archi">建築</span>
+                         </figure>
+                         <div class="p-home-works__info">
+                           <h3 class="p-home-works__title">◯◯ビル工事</h3>
+                           <time>2022.02.24</time>
+                         </div>
+                       </div>
+                     </a>
+                   </li>
+                   <li class="p-home-works__slide splide__slide">
+                     <a href="" class="p-home-works__slideLink">
+                       <div class="p-home-works__item slide-img">
+                         <figure>
+                           <img src="assets/images/home/works_img01.jpg" alt="" />
+                           <span class="p-home-works__itemTag -archi">建築</span>
+                         </figure>
+                         <div class="p-home-works__info">
+                           <h3 class="p-home-works__title">◯◯ビル工事</h3>
+                           <time>2022.02.24</time>
+                         </div>
+                       </div>
+                     </a>
+                   </li>
+                   <li class="p-home-works__slide splide__slide">
+                     <a href="" class="p-home-works__slideLink">
+                       <div class="p-home-works__item slide-img">
+                         <figure>
+                           <img src="assets/images/home/works_img01.jpg" alt="" />
+                           <span class="p-home-works__itemTag -archi">建築</span>
+                         </figure>
+                         <div class="p-home-works__info">
+                           <h3 class="p-home-works__title">◯◯ビル工事</h3>
+                           <time>2022.02.24</time>
+                         </div>
+                       </div>
+                     </a>
+                   </li>
+                   <li class="p-home-works__slide splide__slide">
+                     <a href="" class="p-home-works__slideLink">
+                       <div class="p-home-works__item slide-img">
+                         <figure>
+                           <img src="assets/images/home/works_img01.jpg" alt="" />
+                           <span class="p-home-works__itemTag -archi">建築</span>
+                         </figure>
+                         <div class="p-home-works__info">
+                           <h3 class="p-home-works__title">◯◯ビル工事</h3>
+                           <time>2022.02.24</time>
+                         </div>
+                       </div>
+                     </a>
+                   </li>
+                   <li class="p-home-works__slide splide__slide">
+                     <a href="" class="p-home-works__slideLink">
+                       <div class="p-home-works__item slide-img">
+                         <figure>
+                           <img src="assets/images/home/works_img01.jpg" alt="" />
+                           <span class="p-home-works__itemTag -archi">建築</span>
+                         </figure>
+                         <div class="p-home-works__info">
+                           <h3 class="p-home-works__title">◯◯ビル工事</h3>
+                           <time>2022.02.24</time>
+                         </div>
+                       </div>
+                     </a>
+                   </li>
+                   <!-- /スライダーのコンテンツ -->
+                 </ul>
+               </div>
+             </div>
+             <!-- splide -->
+             <!-- mouse cursor -->
+             <div id="js-cursor" class="p-cursor"></div>
+             <div id="js-chaser" class="p-chaser">
+               <p class="text">DRAG</p>
+             </div>
+             <!-- /mouse cursor -->
              <!-- c-text-loop -->
              <div class="c-text-loop">
                <div class="c-text-loop__textWrap">
@@ -616,7 +702,7 @@
            <div class="l-footer__menu">
              <ul class="l-footer__list">
                <li class="l-footer__item">
-                 <a href=""> companey </a>
+                 <a href=""> company </a>
                </li>
                <li class="l-footer__item">
                  <a href=""> service </a>

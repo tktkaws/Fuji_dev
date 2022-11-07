@@ -13,6 +13,10 @@ module.exports = {
     top: path.join(__dirname, "_static", "src", "assets", "js", "top.js"),
   },
 
+  resolve: {
+    extensions: [".js"], // add your other extensions here
+  },
+
   // ファイルの出力設定
   output: {
     path: path.join(__dirname, "_static", "dist", "assets", "js"),
