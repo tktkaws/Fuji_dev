@@ -1,6 +1,7 @@
 @use "./../../foundation/global" as *;
 
 .p-home-kv {
+  background-color: $c-white;
   &__grid-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1080px;
