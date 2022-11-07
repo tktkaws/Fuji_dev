@@ -1,0 +1,63 @@
+<% let pageId = 'company'; %> <% let path = jsonData.pages[pageId].path %>
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../common/_head', {pageId:pageId }) %>
+  <body class="">
+    <div class="wrap" ontouchstart="">
+      <%- include('../common/_header', {pageId:pageId }) %>
+      <!-- main -->
+      <main class="l-main">
+        <!-- テンプレート化 -->
+        <section class="l-hero">
+          <div class="l-hero__main-wrapper">
+            <div class="l-hero__heading-wrapper">
+              <div class="c-heading">
+                <h2 class="c-heading__title">Company</h2>
+                <div class="c-heading__subtitle">会社情報</div>
+              </div>
+            </div>
+            <figure class="l-hero__image">
+              <img
+                src="<%= path %>assets/images/company/hero_company.jpg"
+                alt=""
+              />
+            </figure>
+          </div>
+          <div class="l-hero__breadcrumbs"><a href="">top</a>会社情報</div>
+        </section>
+
+        <section class="p-company-message">
+          <div class="c-sub-heading">
+            <h3 class="c-sub-heading__title">Message</h3>
+            <div class="c-sub-heading__subtitle">メッセージ</div>
+          </div>
+          <div class="p-company-message__main-wrapper">
+            <div class="p-commany-message__text-wrapper">
+              <strong class="p-commany-message__text-title"
+                >過去と未来を繋ぎ続ける</strong
+              >
+              <p class="p-commany-message__text">
+                これまでの実績を築き上げてきた挑戦と経験を、未来のお客さまへ繋いでいくことをテーマにして日々のお仕事に励んでいます。<br />
+                「過去と未来を繋ぎ続ける」そんな建設会社を目指す技術集団が、藤原建設工業株式会社です。
+              </p>
+              <p class="p-commany-message__name">
+                藤原建設工業株式会社　代表取締役社長<br />
+                藤原 ◯◯
+              </p>
+            </div>
+            <figure class="p-company-message__image">
+              <img src="<%= path %>assets/images/company/message.jpg" alt="" />
+            </figure>
+          </div>
+        </section>
+        <section class="p-company-info"></section>
+        <section class="p-home-access"></section>
+        <!-- テンプレート化 -->
+        <section class="l-sub-footer"></section>
+      </main>
+      <!-- /main -->
+      <%- include('../common/_footer', {pageId:pageId }) %> <%-
+      include('../common/_script', {pageId:pageId }) %>
+    </div>
+  </body>
+</html>

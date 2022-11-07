@@ -17,6 +17,13 @@
       "type": "article",
       "slug": "about/about.html",
       "path": "../"
+    },
+    "company": {
+      "name": "会社情報 | 藤原建設工業株式会社",
+      "description": "「過去と未来を繋ぎ続ける」そんな会社を目指す技術集団が、藤原建設工業です。",
+      "type": "article",
+      "slug": "company/index.html",
+      "path": "../"
     }
   }
 }

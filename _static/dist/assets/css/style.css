@@ -792,6 +792,45 @@ th {
   pointer-events: none;
 }
 
+.l-hero__main-wrapper {
+  -webkit-box-pack: end;
+  -webkit-box-align: center;
+  display: -webkit-box;
+  display: flex;
+          align-items: center;
+          justify-content: flex-end;
+}
+.l-hero__heading-wrapper {
+  z-index: 1;
+  margin-right: -10%;
+}
+.l-hero__image {
+  width: 73%;
+  height: 604px;
+}
+.l-hero__image img {
+  -o-object-fit: cover;
+  width: 100%;
+  height: 100%;
+     object-fit: cover;
+}
+.l-hero__breadcrumbs {
+  text-align: right;
+}
+.l-hero__breadcrumbs a {
+  margin-right: 1rem;
+  text-decoration: underline;
+  text-transform: uppercase;
+}
+.l-hero__breadcrumbs a::after {
+  display: inline-block;
+  width: 1.5rem;
+  margin-bottom: 0.5rem;
+  margin-left: 0.5rem;
+  border-bottom: 1px solid;
+  content: "";
+}
+
 .c-arrow {
   display: inline-block;
   position: relative;
@@ -1644,6 +1683,34 @@ th {
   gap: 27%;
 }
 
+.p-company-message__main-wrapper {
+  display: -webkit-box;
+  display: flex;
+  position: relative;
+}
+.p-company-message__main-wrapper::after {
+  display: block;
+  z-index: 1;
+  position: absolute;
+  bottom: 0;
+  -webkit-text-stroke: 1px #88b999;
+  content: "message";
+  color: rgba(0, 0, 0, 0);
+  font-weight: bold;
+  font-size: 20rem;
+  font-family: Arial, sans-serif;
+  text-transform: uppercase;
+}
+.p-company-message__image {
+  width: 480px;
+  height: 525px;
+}
+.p-company-message__image img {
+  -o-object-fit: cover;
+  width: 100%;
+  height: 100%;
+     object-fit: cover;
+}
 .u-inline-block {
   display: inline-block;
 }

@@ -14,6 +14,8 @@
 @use "./layout/footer";
 @use "./layout/mobile-nav";
 @use "./layout/main";
+@use "./layout/hero";
+@use "./layout/sub-footer";
 
 /*-------------------
 * component
@@ -34,6 +36,9 @@
 @use "./object/project/home-works";
 @use "./object/project/home-news";
 @use "./object/project/home-recruit";
+@use "./object/project/company-access";
+@use "./object/project/company-info";
+@use "./object/project/company-message";
 
 /*-------------------
   * utility
