@@ -1,23 +1,51 @@
 @use "./../../foundation/global" as *;
 
 .p-company-message {
+  padding-inline: $size5;
+  margin-top: $size5;
+  padding-bottom: $size5;
   &__main-wrapper {
+    margin-top: $size2;
     display: flex;
+    gap: $size5;
     position: relative;
     &::after {
       content: "message";
       display: block;
       position: absolute;
-      bottom: 0;
-      font-size: 20rem;
+      bottom: -16%;
       z-index: 1;
-      text-transform: uppercase;
+      font-size: 20rem;
+      letter-spacing: -5px;
       font-weight: bold;
       font-family: $f-en;
       -webkit-text-stroke: 1px $c-main;
       color: rgba(0, 0, 0, 0);
+      text-transform: uppercase;
     }
   }
+
+  &__text-wrapper {
+    width: 350px;
+  }
+  &__text-title {
+    font-weight: normal;
+    font-size: 2.8rem;
+    letter-spacing: 0.3rem;
+  }
+  &__text {
+    margin-top: $size;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    letter-spacing: 0.2rem;
+  }
+  &__name {
+    margin-top: $size;
+    font-size: 1.5rem;
+    line-height: 1.8;
+    letter-spacing: 0.2rem;
+  }
+
   &__image {
     width: 480px;
     height: 525px;
@@ -26,15 +54,5 @@
       height: 100%;
       object-fit: cover;
     }
-  }
-  &__ {
-  }
-  &__ {
-  }
-  &__ {
-  }
-  &__ {
-  }
-  &__ {
   }
 }

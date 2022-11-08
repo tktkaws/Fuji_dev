@@ -92,6 +92,21 @@
   }
 }
 
+.c-sub-heading {
+  min-width: 355px;
+
+  &__title {
+    font-family: $f-en;
+    font-size: 3.6rem;
+    font-weight: bold;
+  }
+  &__subtitle {
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+    color: $c-main;
+  }
+}
+
 .c-desc {
   // リファクタリング
   width: 355px;
@@ -173,5 +188,29 @@
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+.c-definition {
+  &__list {
+    // width: 680px;
+    // margin-left: 200px;
+  }
+  &__list-item {
+    display: flex;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    border-top: 1px solid $c-gray--lighter;
+    &:last-child {
+      border-bottom: 1px solid $c-gray--lighter;
+    }
+  }
+  &__term {
+    width: 160px;
+    font-size: 1.5rem;
+    letter-spacing: 0.3rem;
+  }
+  &__desc {
+    letter-spacing: 0.3rem;
   }
 }

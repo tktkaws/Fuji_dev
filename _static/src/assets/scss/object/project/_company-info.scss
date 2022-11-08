@@ -1,0 +1,11 @@
+@use "./../../foundation/global" as *;
+
+.p-company-info {
+  padding-inline: $size5;
+  display: flex;
+  padding-bottom: $size5;
+
+  &__dl-wrapper {
+    width: 680px;
+  }
+}
