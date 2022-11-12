@@ -5,12 +5,22 @@ const TerserPlugin = require("terser-webpack-plugin");
 module.exports = {
   // モード値を production に設定すると最適化された状態で出力される
   // development に設定するとソースマップ有効でJSファイルが出力される
-  mode: "production",
+  // mode: "production",
+  mode: "development",
 
   // メインとなるJavaScriptファイル（エントリーポイント）
   entry: {
     common: path.join(__dirname, "_static", "src", "assets", "js", "common.js"),
     top: path.join(__dirname, "_static", "src", "assets", "js", "top.js"),
+    service: path.join(
+      __dirname,
+      "_static",
+      "src",
+      "assets",
+      "js",
+      "service.js"
+    ),
+    sample: path.join(__dirname, "_static", "src", "assets", "js", "sample.js"),
   },
 
   resolve: {
