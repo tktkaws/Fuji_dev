@@ -14,6 +14,9 @@
     align-items: center;
   }
   &__logo {
+    @include mq(sm) {
+      width: 77px;
+    }
   }
   &__nav {
     @include mq(max-lg) {
@@ -98,9 +101,13 @@
   }
   // hamburger-btn
   &__hamburger-btn {
-    @include mq(lg) {
+    @include mq(min-md) {
       display: none;
     }
+    @include mq(sm) {
+      width: 30px;
+    }
+
     all: unset;
     outline: revert;
     -webkit-tap-highlight-color: transparent;

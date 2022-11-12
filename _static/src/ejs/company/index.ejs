@@ -7,7 +7,6 @@
       <%- include('../common/_header', {pageId:pageId }) %>
       <!-- main -->
       <main class="l-main">
-        <!-- テンプレート化 -->
         <section class="l-hero">
           <div class="l-hero__main-wrapper">
             <div class="l-hero__heading-wrapper">
@@ -27,34 +26,37 @@
         </section>
 
         <section class="p-company-message">
-          <div class="c-sub-heading">
-            <h3 class="c-sub-heading__title">Message</h3>
-            <div class="c-sub-heading__subtitle">メッセージ</div>
-          </div>
-          <div class="p-company-message__main-wrapper">
-            <div class="p-company-message__text-wrapper">
-              <p class="p-company-message__text-title">
-                過去と未来を繋ぎ続ける
-              </p>
-              <p class="p-company-message__text">
-                これまでの実績を築き上げてきた挑戦と経験を、未来のお客さまへ繋いでいくことをテーマにして日々のお仕事に励んでいます。<br />
-                「過去と未来を繋ぎ続ける」そんな建設会社を目指す技術集団が、藤原建設工業株式会社です。
-              </p>
-              <p class="p-company-message__name">
-                藤原建設工業株式会社　代表取締役社長<br />
-                藤原 ◯◯
-              </p>
+          <div class="p-company-message__heading-wrapper">
+            <div class="c-sub-heading">
+              <h3 class="c-sub-heading__title">Message</h3>
+              <div class="c-sub-heading__subtitle">メッセージ</div>
             </div>
-            <figure class="p-company-message__image">
-              <img src="<%= path %>assets/images/company/message.jpg" alt="" />
-            </figure>
           </div>
+
+          <div class="p-company-message__text-wrapper">
+            <p class="p-company-message__text-title">過去と未来を繋ぎ続ける</p>
+            <p class="p-company-message__text">
+              これまでの実績を築き上げてきた挑戦と経験を、未来のお客さまへ繋いでいくことをテーマにして日々のお仕事に励んでいます。<br />
+              「過去と未来を繋ぎ続ける」そんな建設会社を目指す技術集団が、藤原建設工業株式会社です。
+            </p>
+            <p class="p-company-message__name">
+              藤原建設工業株式会社　代表取締役社長<br />
+              藤原 ◯◯
+            </p>
+          </div>
+          <figure class="p-company-message__image">
+            <img src="<%= path %>assets/images/company/message.jpg" alt="" />
+          </figure>
+          <div class="p-company-message__deco">message</div>
         </section>
         <section class="p-company-info">
-          <div class="c-sub-heading">
-            <h3 class="c-sub-heading__title">Infomation</h3>
-            <div class="c-sub-heading__subtitle">会社概要</div>
+          <div class="p-company-info__heading-wrapper">
+            <div class="c-sub-heading">
+              <h3 class="c-sub-heading__title">Infomation</h3>
+              <div class="c-sub-heading__subtitle">会社概要</div>
+            </div>
           </div>
+
           <div class="p-company-info__dl-wrapper">
             <dl class="c-definition__list">
               <div class="c-definition__list-item">
@@ -91,9 +93,11 @@
           </div>
         </section>
         <section class="p-company-access">
-          <div class="c-sub-heading">
-            <h3 class="c-sub-heading__title">Access</h3>
-            <div class="c-sub-heading__subtitle">アクセス</div>
+          <div class="p-company-access__heading-wrapper">
+            <div class="c-sub-heading">
+              <h3 class="c-sub-heading__title">Access</h3>
+              <div class="c-sub-heading__subtitle">アクセス</div>
+            </div>
           </div>
           <div class="p-company-access__container">
             <iframe

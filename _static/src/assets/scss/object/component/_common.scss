@@ -35,17 +35,17 @@
   }
   &--round-top::before {
     box-sizing: border-box;
-    width: 3rem;
-    height: 3rem;
+    width: 5rem;
+    height: 5rem;
     border: 1px solid;
     -webkit-border-radius: 50%;
     border-radius: 50%;
   }
   &--round-top::after {
-    left: 0.9rem;
-    top: 0.2rem;
-    width: 1rem;
-    height: 1rem;
+    top: 0.5rem;
+    left: 1.8rem;
+    width: 1.2rem;
+    height: 1.2rem;
     border-top: 1px solid;
     border-right: 1px solid;
     -webkit-transform: rotate(315deg);
@@ -64,12 +64,19 @@
 }
 
 .c-heading {
+  padding-left: 2em;
+  @include mq(sm) {
+  }
+  // padding-left: $size5;
   &__title {
     font-family: $f-en;
     font-size: 6.4rem;
+    @include mq(sm) {
+      font-size: fluid(42, 64, 320, 768);
+    }
     font-weight: bold;
-    margin-top: 5rem;
-    margin-left: 2rem;
+    // margin-top: 5rem;
+    // margin-left: 2rem;
     position: relative;
     &::before {
       position: absolute;
@@ -89,6 +96,9 @@
     color: $c-main;
     margin-left: 2rem;
     margin-top: 0.5rem;
+    @include mq(sm) {
+      font-size: 1.4rem;
+    }
   }
 }
 
@@ -193,8 +203,6 @@
 
 .c-definition {
   &__list {
-    // width: 680px;
-    // margin-left: 200px;
   }
   &__list-item {
     display: flex;
@@ -206,11 +214,20 @@
     }
   }
   &__term {
-    width: 160px;
+    flex-basis: 30%;
     font-size: 1.5rem;
     letter-spacing: 0.3rem;
   }
   &__desc {
+    flex-basis: 70%;
     letter-spacing: 0.3rem;
+    font-size: 1.5rem;
   }
 }
+// @include mq(to-sm) {
+//   .c-definition {
+//     &__desc {
+//       font-size: 1.4rem;
+//     }
+//   }
+// }
