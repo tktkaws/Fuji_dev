@@ -35,7 +35,6 @@ const webpackStream = require("webpack-stream"); // gulpでwebpackを使うた�
 const webpackConfig = require("./webpack.config");
 
 // WebPでの画像圧縮
-const tinyping = require("gulp-tinypng-compress");
 const webp = require("gulp-webp");
 
 // ejs
@@ -59,10 +58,10 @@ const srcPath = {
   js: srcBase + "/assets/js/**/*.js",
   externaljs: srcBase + "/assets/js/external/*.js",
   img: srcBase + "/assets/images/**/*",
-  video: srcBase + "/assets/video/**/*",
+  video: srcBase + "/assets/images/video/**/*",
   font: srcBase + "/assets/font/**/*",
-  // php: srcBase + '/**/*.php',
   // doc: srcBase + '/assets/documents/**/*',
+  // php: srcBase + '/**/*.php',
 };
 
 const distPath = {
@@ -71,7 +70,7 @@ const distPath = {
   css: distBase + "/assets/css/",
   js: distBase + "/assets/js/",
   img: distBase + "/assets/images/",
-  video: distBase + "/assets/video/",
+  video: distBase + "/assets/images/video/",
   font: distBase + "/assets/font/",
   // doc: distBase + '/assets/documents/',
   // php: distBase + '/',
@@ -95,28 +94,30 @@ const clean = () => {
 
 // sassのコンパイル・ベンダープレフィックス自動付与
 const cssSass = () => {
-  return gulp
-    .src(srcPath.scss, {
-      sourcemaps: true,
-    })
-    .pipe(
-      //エラーが出ても処理を止めない
-      plumber({
-        errorHandler: notify.onError("Error:<%= error.message %>"),
+  return (
+    gulp
+      .src(srcPath.scss, {
+        sourcemaps: true,
       })
-    )
-    .pipe(sass({ outputStyle: "expanded" })) //指定できるキー expanded compressed
-    .pipe(postcss([autoprefixer()])) //autoprefixer
-    .pipe(postcss([mqpacker()])) // メディアクエリをまとめる
-    .pipe(postcss([cssdeclsort({ order: "smacss" })])) // コンパイル後のプロパティ順序
-    .pipe(gulp.dest(distPath.css, { sourcemaps: "./" })) //コンパイル先
-    .pipe(browserSync.stream())
-    .pipe(
-      notify({
-        message: "Sassをコンパイルし、ベンダープレフィックスを付与しました！",
-        onLast: true,
-      })
-    );
+      .pipe(
+        //エラーが出ても処理を止めない
+        plumber({
+          errorHandler: notify.onError("Error:<%= error.message %>"),
+        })
+      )
+      .pipe(sass({ outputStyle: "expanded" })) //指定できるキー expanded compressed
+      .pipe(postcss([autoprefixer()])) //autoprefixer
+      // .pipe(postcss([mqpacker()])) // メディアクエリをまとめる
+      // .pipe(postcss([cssdeclsort({ order: "smacss" })])) // コンパイル後のプロパティ順序
+      .pipe(gulp.dest(distPath.css, { sourcemaps: "./" })) //コンパイル先
+      .pipe(browserSync.stream())
+      .pipe(
+        notify({
+          message: "Sassをコンパイルし、ベンダープレフィックスを付与しました！",
+          onLast: true,
+        })
+      )
+  );
 };
 
 // html
@@ -124,7 +125,7 @@ const html = () => {
   return gulp.src(srcPath.html).pipe(gulp.dest(distPath.html));
 };
 
-// WebPへの変換
+// 画像圧縮＋WebPへの変換
 const gulpwebp = () => {
   return gulp
     .src(srcPath.img + ".{svg,gif,ico,png,jpg,jpeg}")
@@ -132,15 +133,10 @@ const gulpwebp = () => {
     .pipe(gulp.dest(distPath.img));
 };
 
-// 画像圧縮
-const tinypng = () => {
+// img（画像をsrcからdistへ）
+const img = () => {
   return gulp
-    .src(srcPath.img + ".{png,jpg,jpeg}")
-    .pipe(
-      tinyping({
-        key: "kTpY5sN0FT5qKd0zKzm66LMbsw454rGB", // TinyPNGのAPI Key
-      })
-    )
+    .src(srcPath.img + ".{svg,gif,ico,png,jpg,jpeg}")
     .pipe(gulp.dest(distPath.img));
 };
 
@@ -244,8 +240,8 @@ const browserSyncReload = (done) => {
 const watchFiles = () => {
   gulp.watch(srcPath.html, gulp.series(html, browserSyncReload));
   gulp.watch(srcPath.scss, gulp.series(cssSass));
-  gulp.watch(srcPath.img, gulp.series(gulpwebp, tinypng, browserSyncReload));
-  gulp.watch(srcPath.img, gulp.series(tinypng, browserSyncReload));
+  gulp.watch(srcPath.img, gulp.series(gulpwebp, browserSyncReload));
+  gulp.watch(srcPath.img, gulp.series(img, browserSyncReload));
   gulp.watch(srcPath.js, gulp.series(bundleJs, browserSyncReload));
   gulp.watch(srcPath.externaljs, gulp.series(externaljs, browserSyncReload));
   gulp.watch(srcPath.font, gulp.series(font, browserSyncReload));
@@ -261,7 +257,7 @@ exports.default = gulp.series(
   gulp.parallel(
     html,
     cssSass,
-    tinypng,
+    img,
     gulpwebp,
     video,
     bundleJs,

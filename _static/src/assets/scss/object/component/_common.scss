@@ -117,6 +117,21 @@
   }
 }
 
+.c-sub-heading--service {
+  min-width: 355px;
+  color: $c-white;
+
+  &__title {
+    font-family: $f-en;
+    font-size: 3.6rem;
+    font-weight: bold;
+  }
+  &__subtitle {
+    font-size: 1.4rem;
+    margin-top: 0.5rem;
+  }
+}
+
 .c-desc {
   // リファクタリング
   width: 355px;
@@ -139,6 +154,32 @@
     }
   }
   &__link-text {
+  }
+}
+
+.c-desc--service {
+  // リファクタリング
+  width: 355px;
+  &__text {
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    letter-spacing: 0.8rem;
+    line-height: 1.5em;
+  }
+  &__link {
+    margin-top: 3rem;
+    text-align: right;
+    font-family: $f-en;
+    color: $c-white;
+    a {
+      display: flex;
+      justify-content: flex-end;
+      margin-right: 4rem;
+      gap: 1rem;
+    }
+  }
+  &__link-text {
+    letter-spacing: 0.5rem;
   }
 }
 
