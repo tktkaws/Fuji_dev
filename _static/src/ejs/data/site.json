@@ -25,6 +25,13 @@
       "slug": "company/index.html",
       "path": "../"
     },
+    "works": {
+      "name": "施工実績  | 藤原建設工業株式会社",
+      "description": "施工実績の記事一覧ページです。",
+      "type": "article",
+      "slug": "works/index.html",
+      "path": "../"
+    },
     "service": {
       "name": "事業内容 | 藤原建設工業株式会社",
       "description": "「過去と未来を繋ぎ続ける」そんな会社を目指す技術集団が、藤原建設工業です。",

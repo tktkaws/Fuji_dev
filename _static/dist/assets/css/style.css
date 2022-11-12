@@ -1968,6 +1968,92 @@ th {
 .p-service-scroll__link-wrapper {
   margin-top: 5rem;
 }
+.p-works-category {
+  display: grid;
+  grid-template-columns: 13.5% 1fr 13.5%;
+  padding-top: 10rem;
+}
+.p-works-category > * {
+  grid-column: 2/2;
+}
+.p-works-category__title-wrapper {
+  -webkit-box-pack: justify;
+  -webkit-box-align: center;
+  display: -webkit-box;
+  display: flex;
+          align-items: center;
+          justify-content: space-between;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #cbcbcb;
+}
+.p-works-category__heading {
+  font-weight: bold;
+  font-size: 3.6rem;
+  font-family: Arial, sans-serif;
+}
+.p-works-category__titles {
+  display: -webkit-box;
+  display: flex;
+}
+.p-works-category__title {
+  margin-left: 4rem;
+  color: #cbcbcb;
+}
+.p-works-category__title.is-active {
+  color: #111111;
+}
+.p-works-category__card-wrapper {
+  padding-top: 10rem;
+}
+.p-works-category__cards {
+  -webkit-box-pack: justify;
+  display: -webkit-box;
+  display: flex;
+  flex-flow: wrap;
+          justify-content: space-between;
+}
+.p-works-category__card {
+  width: 320px;
+  margin-bottom: 5rem;
+}
+.p-works-category__card a:hover {
+  color: #88b999;
+}
+.p-works-category__card a:hover figure {
+  overflow: hidden;
+}
+.p-works-category__card a:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.p-works-category__image {
+  position: relative;
+  aspect-ratio: 320/240;
+  width: 100%;
+}
+.p-works-category__image img {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.p-works-category__image::after {
+  display: block;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem 3rem;
+  background-color: #88b999;
+  content: "建築";
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+.p-works-category__card-text-wrapper {
+  -webkit-box-pack: justify;
+  display: -webkit-box;
+  display: flex;
+          justify-content: space-between;
+  padding-top: 1rem;
+}
 .u-inline-block {
   display: inline-block;
 }
