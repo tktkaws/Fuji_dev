@@ -8,6 +8,12 @@
 @use "./foundation/reset";
 @use "./foundation/function";
 @use "./foundation/global";
+/*-------------------
+  * lib
+  -------------------*/
+@use "./lib/swiper.min.css";
+@use "./lib/splide.min.css";
+@use "./lib/glightbox";
 
 /*--------------------------------------*
 * layout
@@ -43,14 +49,9 @@
 @use "./object/project/company-message";
 @use "./object/project/fixed-bg";
 @use "./object/project/works-cagegory";
+@use "./object/project/p-works-detail";
 
 /*-------------------
   * utility
   -------------------*/
 @use "./object/utility/display";
-
-/*-------------------
-  * lib
-  -------------------*/
-@use "./lib/swiper.min.css";
-@use "./lib/splide.min.css";
