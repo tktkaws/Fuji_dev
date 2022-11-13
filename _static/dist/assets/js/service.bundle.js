@@ -9,13 +9,13 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./_static/src/assets/js/modules/serviceScroll.js":
-/*!********************************************************!*\
-  !*** ./_static/src/assets/js/modules/serviceScroll.js ***!
-  \********************************************************/
+/***/ "./_static/src/assets/js/modules/fixedService.js":
+/*!*******************************************************!*\
+  !*** ./_static/src/assets/js/modules/fixedService.js ***!
+  \*******************************************************/
 /***/ (function() {
 
-eval("/*==============================================================\nfixedService\n・背景と文字の固定\n==============================================================*/\n\nvar area = document.querySelector(\".p-fixed-bg\");\nvar panels = document.querySelectorAll(\".p-fixed-bg__area\");\nvar panelText = document.querySelectorAll(\".p-service__inner\");\nvar panelImg = document.querySelectorAll(\".p-fixed-bg__img\");\nvar length = panels.length;\nvar itemSwitch = function itemSwitch(progress) {\n  var snapVal = gsap.utils.snap(1, progress * length - 0.5); //0 , 1 , 2...length\n  var clampVal = gsap.utils.clamp(0, length - 1, snapVal); //0 ～ length -1 の間に収める\n  panels.forEach(function (panel, index) {\n    if (index == clampVal) {\n      panel.classList.add(\"is-active\");\n    } else {\n      panel.classList.remove(\"is-active\");\n    }\n  });\n  panelText.forEach(function (text, index) {\n    if (index == clampVal) {\n      text.classList.add(\"is-active\");\n    } else {\n      text.classList.remove(\"is-active\");\n    }\n  });\n  panelImg.forEach(function (img, index) {\n    if (index == clampVal) {\n      img.classList.add(\"is-active\");\n    } else {\n      img.classList.remove(\"is-active\");\n    }\n  });\n};\nitemSwitch(0);\nScrollTrigger.create({\n  trigger: area,\n  start: \"top\",\n  end: \"+=500%\",\n  scrub: true,\n  pin: true,\n  // markers: true,\n  onUpdate: function onUpdate(self) {\n    itemSwitch(self.progress);\n  }\n});\n\n//# sourceURL=webpack://cording_template/./_static/src/assets/js/modules/serviceScroll.js?");
+eval("/*==============================================================\nfixedService\n・背景と文字の固定\n==============================================================*/\n\nvar area = document.querySelector(\".p-fixed-bg\");\nvar panels = document.querySelectorAll(\".p-fixed-bg__area\");\nvar panelText = document.querySelectorAll(\".p-service__inner\");\nvar panelImg = document.querySelectorAll(\".p-fixed-bg__img\");\nvar length = panels.length;\nvar itemSwitch = function itemSwitch(progress) {\n  var snapVal = gsap.utils.snap(1, progress * length - 0.5); //0 , 1 , 2...length\n  var clampVal = gsap.utils.clamp(0, length - 1, snapVal); //0 ～ length -1 の間に収める\n  panels.forEach(function (panel, index) {\n    if (index == clampVal) {\n      panel.classList.add(\"is-active\");\n    } else {\n      panel.classList.remove(\"is-active\");\n    }\n  });\n  panelText.forEach(function (text, index) {\n    if (index == clampVal) {\n      text.classList.add(\"is-active\");\n    } else {\n      text.classList.remove(\"is-active\");\n    }\n  });\n  panelImg.forEach(function (img, index) {\n    if (index == clampVal) {\n      img.classList.add(\"is-active\");\n    } else {\n      img.classList.remove(\"is-active\");\n    }\n  });\n};\nitemSwitch(0);\nScrollTrigger.create({\n  trigger: area,\n  start: \"top\",\n  end: \"+=500%\",\n  scrub: true,\n  pin: true,\n  // markers: true,\n  onUpdate: function onUpdate(self) {\n    itemSwitch(self.progress);\n  }\n});\n\n//# sourceURL=webpack://cording_template/./_static/src/assets/js/modules/fixedService.js?");
 
 /***/ }),
 
@@ -26,7 +26,7 @@ eval("/*==============================================================\nfixedSer
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\nvar $ = (jquery__WEBPACK_IMPORTED_MODULE_0___default());\n__webpack_require__(/*! ./modules/serviceScroll */ \"./_static/src/assets/js/modules/serviceScroll.js\");\n\n//# sourceURL=webpack://cording_template/./_static/src/assets/js/service.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\nvar $ = (jquery__WEBPACK_IMPORTED_MODULE_0___default());\n__webpack_require__(/*! ./modules/fixedService */ \"./_static/src/assets/js/modules/fixedService.js\");\n\n//# sourceURL=webpack://cording_template/./_static/src/assets/js/service.js?");
 
 /***/ }),
 

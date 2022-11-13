@@ -1,6 +1,8 @@
 @use "./../foundation/global" as *;
 
 .l-hero {
+  position: relative;
+
   &__main-wrapper {
     display: flex;
     justify-content: flex-end;
@@ -20,6 +22,7 @@
       object-fit: cover;
     }
   }
+
   &__breadcrumbs {
     margin-top: 4rem;
     margin-right: $size;
@@ -40,6 +43,12 @@
         margin-left: 0.5rem;
       }
     }
+  }
+  &__breadcrumbs.--service {
+    position: absolute;
+    bottom: -10%;
+    right: 0;
+    z-index: 3;
   }
 }
 
@@ -68,7 +77,6 @@
       grid-column: 2/-2;
       margin-top: 15rem;
       margin-bottom: 2rem;
-      // margin-left: 2rem;
     }
     &__image {
       grid-column: 1/-1;
