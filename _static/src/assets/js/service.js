@@ -1,4 +1,4 @@
 import jQuery from "jquery";
 const $ = jQuery;
 
-require("./modules/serviceScroll");
+require("./modules/fixedService");

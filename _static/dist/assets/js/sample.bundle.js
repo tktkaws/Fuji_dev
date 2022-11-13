@@ -15,7 +15,7 @@
   \*****************************************/
 /***/ (function() {
 
-eval("\n\n//# sourceURL=webpack://cording_template/./_static/src/assets/js/sample.js?");
+eval("// import jQuery from \"jquery\";\n// const $ = jQuery;\n\n// require(\"./modules/fixedService\");\n\n//# sourceURL=webpack://cording_template/./_static/src/assets/js/sample.js?");
 
 /***/ })
 
