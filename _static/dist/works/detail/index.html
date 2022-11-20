@@ -20,12 +20,19 @@
    <link rel="stylesheet" href="../../assets/css/style.css" />
    <!-- Remove "outline" when in focus(other than keyboard operation) -->
    <script src="https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js" integrity="sha384-xRa5B8rCDfdg0npZcxAh+RXswrbFk3g6dlHVeABeluN8EIwdyljz/LqJgc2R3KNA" crossorigin="anonymous" defer></script>
-   <!-- ファイルからの読み込みに切り替える -->
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+   <!-- ファイルからの読み込みに切り替える TOPはこれがないと動かない -->
+   <!-- <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+  />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+  <script
+    type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
+  ></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
  </head>
  <body class="subpage js-body">
    <div class="" ontouchstart="">
@@ -181,19 +188,16 @@
      <!-- /cusor-pointer -->
      <!-- main -->
      <main id="top" class="l-main">
-       <section class="l-hero">
-         <div class="l-hero__main-wrapper">
-           <div class="l-hero__heading-wrapper">
-             <div class="c-heading">
-               <h2 class="c-heading__title">Works</h2>
-               <div class="c-heading__subtitle">施工実績</div>
-             </div>
+       <section class="l-hero--noimg">
+         <div class="l-hero--noimg__heading-wrapper">
+           <div class="c-heading">
+             <h2 class="c-heading__title">Works</h2>
+             <div class="c-heading__subtitle">施工実績</div>
            </div>
-           <figure class="l-hero__image">
-             <!-- <img src="../../assets/images/works/hero_works.jpg" alt="" /> -->
-           </figure>
          </div>
-         <div class="l-hero__breadcrumbs"><a href="">top</a>施工実績</div>
+         <div class="l-hero--noimg__breadcrumbs">
+           <a href="">top</a><a href="">施工実績</a>高等学校改修工事
+         </div>
        </section>
        <!-- sec-works-detail -->
        <section class="p-works-detail">
@@ -223,7 +227,7 @@
                </figure>
                <div id="item01" class="p-works-detail__block js-block01">
                  <h2 class="p-works-detail__blockTitle">概要</h2>
-                 <p class="l-section__text">
+                 <p class="p-works-detail__blockText">
                    県内の高等学校の改修工事を行いました。<br />歴史ある高等学校ということで、これまでの歴史を振り返られる部分は残しつつ、今後も長く存在し続けられるよう、地盤強化を施させていただきました。<br />“安全に過ごせる”を当たり前に、そんな当たり前を自信持って提供し続けられるよう技術を高め続けて参ります。
                  </p>
                </div>
@@ -293,51 +297,74 @@
                    </div>
                  </dl>
                </div>
+               <div class="p-works-detail__otherLinkInner">
+                 <ul class="p-works-detail__otherLinkList">
+                   <li class="p-works-detail__otherLinkItem">
+                     <a href="" class="p-works-detail__otherLink js-works-cursor01 -cursorNone -archi">
+                       <div class="p-works-detail__item-inner">
+                         <div class="p-works-detail__text-left">
+                           <h3 class="p-works-detail__item-title">
+                             Architecture
+                             <br />
+                             <span>建築事業</span>
+                           </h3>
+                         </div>
+                         <div class="p-works-detail__text-right">
+                           <div class="c-arrow c-arrow--round"></div>
+                         </div>
+                       </div>
+                     </a>
+                   </li>
+                   <li class="p-works-detail__otherLinkItem">
+                     <a href="" class="p-works-detail__otherLink js-works-cursor02 -cursorNone -civil">
+                       <div class="p-works-detail__item-inner">
+                         <div class="p-works-detail__text-left">
+                           <h3 class="p-works-detail__item-title">
+                             Civil engineering
+                             <br />
+                             <span>土木事業</span>
+                           </h3>
+                         </div>
+                         <div class="p-works-detail__text-right">
+                           <div class="c-arrow c-arrow--round"></div>
+                         </div>
+                       </div>
+                     </a>
+                   </li>
+                   <li class="p-works-detail__otherLinkItem">
+                     <a href="" class="p-works-detail__otherLink js-works-cursor03 -cursorNone -housing">
+                       <div class="p-works-detail__item-inner">
+                         <div class="p-works-detail__text-left">
+                           <h3 class="p-works-detail__item-title">
+                             Housing
+                             <br />
+                             <span>住宅事業</span>
+                           </h3>
+                         </div>
+                         <div class="p-works-detail__text-right">
+                           <div class="c-arrow c-arrow--round"></div>
+                         </div>
+                       </div>
+                     </a>
+                   </li>
+                 </ul>
+               </div>
+               <div class="p-works-detail__btn-wrapper">
+                 <button class="p-works-detail__btn">
+                   <a href=""> 施工実績一覧へ </a>
+                 </button>
+               </div>
+               <!-- <div class="c-list-button__block">
+                  <a href="../../works" class="c-list-button"
+                    >施工実績一覧へ</a
+                  >
+                </div> -->
              </div>
            </article>
-           <div class="p-works-detail__otherLinkInner">
-             <ul class="p-works-detail__otherLinkList">
-               <li class="p-works-detail__otherLinkItem">
-                 <a href="../../works/archi" class="p-works-detail__otherLink js-works-cursor01 -cursorNone -archi">
-                   <span class="l-section__subTitle">Architecture<span>建築事業</span></span>
-                   <div class="c-link">
-                     <span class="circle">
-                       <span class="arrow"></span>
-                       <span class="arrow"></span>
-                     </span>
-                   </div>
-                 </a>
-               </li>
-               <li class="p-works-detail__otherLinkItem">
-                 <a href="../../works/civil" class="p-works-detail__otherLink js-works-cursor02 -cursorNone -civil">
-                   <span class="l-section__subTitle">Civil engineering<span>土木事業</span></span>
-                   <div class="c-link">
-                     <span class="circle">
-                       <span class="arrow"></span>
-                       <span class="arrow"></span>
-                     </span>
-                   </div>
-                 </a>
-               </li>
-               <li class="p-works-detail__otherLinkItem">
-                 <a href="../../works/housing" class="p-works-detail__otherLink js-works-cursor03 -cursorNone -housing">
-                   <span class="l-section__subTitle">Housing<span>住宅事業</span></span>
-                   <div class="c-link">
-                     <span class="circle">
-                       <span class="arrow"></span>
-                       <span class="arrow"></span>
-                     </span>
-                   </div>
-                 </a>
-               </li>
-             </ul>
-           </div>
-           <div class="c-list-button__block">
-             <a href="../../works" class="c-list-button">施工実績一覧へ</a>
-           </div>
          </div>
        </section>
        <!-- /sec-works-detail -->
+       <section class="p-works-detail-otherlink"></section>
      </main>
      <!-- /main -->
      <!-- subfooter -->
@@ -428,8 +455,10 @@
      <script src="../../assets/js/TweenMax.min.js"></script>
      <!-- worksCursor.js -->
      <script src="../../assets/js/worksCursor.js"></script>
-     <!-- splide.min.js -->
-     <script src="../../assets/js/splide.min.js"></script>
+     <!-- gsap.min.js -->
+     <script src="../../assets/js/gsap.min.js"></script>
+     <!-- ScrollTrigger.min.js -->
+     <script src="../../assets/js/ScrollTrigger.min.js"></script>
      <!-- common.bundle.js -->
      <script src="../../assets/js/common.bundle.js"></script>
      <!-- IE object-fit -->

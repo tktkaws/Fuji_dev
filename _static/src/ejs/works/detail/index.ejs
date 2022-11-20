@@ -39,19 +39,16 @@
       <!-- /cusor-pointer -->
       <!-- main -->
       <main id="top" class="l-main">
-        <section class="l-hero">
-          <div class="l-hero__main-wrapper">
-            <div class="l-hero__heading-wrapper">
-              <div class="c-heading">
-                <h2 class="c-heading__title">Works</h2>
-                <div class="c-heading__subtitle">施工実績</div>
-              </div>
+        <section class="l-hero--noimg">
+          <div class="l-hero--noimg__heading-wrapper">
+            <div class="c-heading">
+              <h2 class="c-heading__title">Works</h2>
+              <div class="c-heading__subtitle">施工実績</div>
             </div>
-            <figure class="l-hero__image">
-              <!-- <img src="<%= path %>assets/images/works/hero_works.jpg" alt="" /> -->
-            </figure>
           </div>
-          <div class="l-hero__breadcrumbs"><a href="">top</a>施工実績</div>
+          <div class="l-hero--noimg__breadcrumbs">
+            <a href="">top</a><a href="">施工実績</a>高等学校改修工事
+          </div>
         </section>
 
         <!-- sec-works-detail -->
@@ -94,7 +91,7 @@
                 </figure>
                 <div id="item01" class="p-works-detail__block js-block01">
                   <h2 class="p-works-detail__blockTitle">概要</h2>
-                  <p class="l-section__text">
+                  <p class="p-works-detail__blockText">
                     県内の高等学校の改修工事を行いました。<br />歴史ある高等学校ということで、これまでの歴史を振り返られる部分は残しつつ、今後も長く存在し続けられるよう、地盤強化を施させていただきました。<br />“安全に過ごせる”を当たり前に、そんな当たり前を自信持って提供し続けられるよう技術を高め続けて参ります。
                   </p>
                 </div>
@@ -190,68 +187,84 @@
                     </div>
                   </dl>
                 </div>
+
+                <div class="p-works-detail__otherLinkInner">
+                  <ul class="p-works-detail__otherLinkList">
+                    <li class="p-works-detail__otherLinkItem">
+                      <a
+                        href=""
+                        class="p-works-detail__otherLink js-works-cursor01 -cursorNone -archi"
+                      >
+                        <div class="p-works-detail__item-inner">
+                          <div class="p-works-detail__text-left">
+                            <h3 class="p-works-detail__item-title">
+                              Architecture
+                              <br />
+                              <span>建築事業</span>
+                            </h3>
+                          </div>
+                          <div class="p-works-detail__text-right">
+                            <div class="c-arrow c-arrow--round"></div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="p-works-detail__otherLinkItem">
+                      <a
+                        href=""
+                        class="p-works-detail__otherLink js-works-cursor02 -cursorNone -civil"
+                      >
+                        <div class="p-works-detail__item-inner">
+                          <div class="p-works-detail__text-left">
+                            <h3 class="p-works-detail__item-title">
+                              Civil engineering
+                              <br />
+                              <span>土木事業</span>
+                            </h3>
+                          </div>
+                          <div class="p-works-detail__text-right">
+                            <div class="c-arrow c-arrow--round"></div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                    <li class="p-works-detail__otherLinkItem">
+                      <a
+                        href=""
+                        class="p-works-detail__otherLink js-works-cursor03 -cursorNone -housing"
+                      >
+                        <div class="p-works-detail__item-inner">
+                          <div class="p-works-detail__text-left">
+                            <h3 class="p-works-detail__item-title">
+                              Housing
+                              <br />
+                              <span>住宅事業</span>
+                            </h3>
+                          </div>
+                          <div class="p-works-detail__text-right">
+                            <div class="c-arrow c-arrow--round"></div>
+                          </div>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="p-works-detail__btn-wrapper">
+                  <button class="p-works-detail__btn">
+                    <a href=""> 施工実績一覧へ </a>
+                  </button>
+                </div>
+                <!-- <div class="c-list-button__block">
+                  <a href="<%= path %>works" class="c-list-button"
+                    >施工実績一覧へ</a
+                  >
+                </div> -->
               </div>
             </article>
-            <div class="p-works-detail__otherLinkInner">
-              <ul class="p-works-detail__otherLinkList">
-                <li class="p-works-detail__otherLinkItem">
-                  <a
-                    href="<%= path %>works/archi"
-                    class="p-works-detail__otherLink js-works-cursor01 -cursorNone -archi"
-                  >
-                    <span class="l-section__subTitle"
-                      >Architecture<span>建築事業</span></span
-                    >
-                    <div class="c-link">
-                      <span class="circle">
-                        <span class="arrow"></span>
-                        <span class="arrow"></span>
-                      </span>
-                    </div>
-                  </a>
-                </li>
-                <li class="p-works-detail__otherLinkItem">
-                  <a
-                    href="<%= path %>works/civil"
-                    class="p-works-detail__otherLink js-works-cursor02 -cursorNone -civil"
-                  >
-                    <span class="l-section__subTitle"
-                      >Civil engineering<span>土木事業</span></span
-                    >
-                    <div class="c-link">
-                      <span class="circle">
-                        <span class="arrow"></span>
-                        <span class="arrow"></span>
-                      </span>
-                    </div>
-                  </a>
-                </li>
-                <li class="p-works-detail__otherLinkItem">
-                  <a
-                    href="<%= path %>works/housing"
-                    class="p-works-detail__otherLink js-works-cursor03 -cursorNone -housing"
-                  >
-                    <span class="l-section__subTitle"
-                      >Housing<span>住宅事業</span></span
-                    >
-                    <div class="c-link">
-                      <span class="circle">
-                        <span class="arrow"></span>
-                        <span class="arrow"></span>
-                      </span>
-                    </div>
-                  </a>
-                </li>
-              </ul>
-            </div>
-            <div class="c-list-button__block">
-              <a href="<%= path %>works" class="c-list-button"
-                >施工実績一覧へ</a
-              >
-            </div>
           </div>
         </section>
         <!-- /sec-works-detail -->
+        <section class="p-works-detail-otherlink"></section>
       </main>
       <!-- /main -->
       <%- include('../../common/_subFooter', {pageId:pageId }) %> <%-
