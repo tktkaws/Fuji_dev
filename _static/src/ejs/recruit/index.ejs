@@ -1,0 +1,372 @@
+<% let pageId = 'recruit'; %> <% let path = jsonData.pages[pageId].path %>
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../common/_head', {pageId:pageId }) %>
+  <body class="">
+    <div class="wrap" ontouchstart="">
+      <%- include('../common/_header', {pageId:pageId }) %>
+      <!-- main -->
+      <main class="l-main">
+        <section class="l-hero">
+          <div class="l-hero__main-wrapper">
+            <div class="l-hero__heading-wrapper">
+              <div class="c-heading">
+                <h2 class="c-heading__title">Recruit</h2>
+                <div class="c-heading__subtitle">採用情報</div>
+              </div>
+            </div>
+            <figure class="l-hero__image">
+              <img src="<%= path %>assets/images/recruit/hero_img.jpg" alt="" />
+            </figure>
+          </div>
+          <div class="l-hero__breadcrumbs"><a href="">top</a>採用情報</div>
+        </section>
+
+        <section class="p-recruit-hero">
+          <h3 class="p-recruit-hero__heading">過去と未来を繋ぎ続ける</h3>
+          <div class="p-recruit-hero__animation">
+            <!-- c-text-loop -->
+            <div class="c-text-loop --recruit">
+              <div class="c-text-loop__textWrap">
+                <div class="c-text-loop__text --recruit">
+                  <span>fujiwara recruit</span>
+                </div>
+              </div>
+            </div>
+            <!-- c-text-loop -->
+          </div>
+          <figure class="p-recruit-hero__image-left">
+            <img src="<%= path %>assets/images/recruit/head_img02.jpg" alt="" />
+          </figure>
+          <figure class="p-recruit-hero__image-right">
+            <img src="<%= path %>assets/images/recruit/head_img01.jpg" alt="" />
+          </figure>
+        </section>
+        <section class="p-recruit-message">
+          <div class="p-recruit-message__text-wrapper">
+            <div class="c-sub-heading">
+              <h3 class="c-sub-heading__title">Message</h3>
+              <div class="c-sub-heading__subtitle">メッセージ</div>
+            </div>
+            <p class="p-recruit-message__text-title">地域の皆様へ恩返しを</p>
+            <p class="p-recruit-message__text">
+              私たちは、これまでたくさんの実績を残してきました。自慢の技術力も企業全体で向上してきており、私たちの誇りの一つです。
+              <br />
+              そんな誇りに思えるモノたちですが、地域の皆様のご協力や声援がなければ、積み上げることが出来なかったのは間違いありません。
+            </p>
+            <p class="p-recruit-message__text">
+              私たちは、これからも「地域の皆様へ恩返しを」を第一に、社会へ貢献していきます。
+              <br />
+              藤原建設工業では、地域へ貢献したいと強く思っている方を求めています。
+            </p>
+          </div>
+
+          <figure class="p-recruit-message__image">
+            <img
+              src="<%= path %>assets/images/recruit/message_img.jpg"
+              alt=""
+            />
+          </figure>
+        </section>
+
+        <secton class="p-recruit-parallax">
+          <figure class="p-recruit-parallax__image">
+            <img
+              src="<%= path %>assets/images/recruit/parallax_img.jpg"
+              alt=""
+            />
+          </figure>
+        </secton>
+
+        <section class="p-recruit-faq">
+          <div class="p-recruit-faq__heading-wrapper">
+            <div class="c-sub-heading">
+              <h3 class="c-sub-heading__title">FAQ</h3>
+              <div class="c-sub-heading__subtitle">よくある質問</div>
+            </div>
+          </div>
+
+          <div class="p-recruit-faq__list-wrapper">
+            <ul class="p-recruit-faq__list">
+              <li class="p-recruit-faq__item">
+                <h2 class="p-recruit-faq__title close">
+                  高校卒業後でもエントリーは可能ですか？<span
+                    class="toggle"
+                  ></span>
+                </h2>
+                <p class="p-recruit-faq__text">
+                  はい、可能です。<br />ただし、エントリーできる職種に制限がある場合がございますので、下記の募集要項をご覧ください。
+                </p>
+              </li>
+              <li class="p-recruit-faq__item">
+                <h2 class="p-recruit-faq__title close">
+                  エントリー方法について教えてください。<span
+                    class="toggle"
+                  ></span>
+                </h2>
+                <p class="p-recruit-faq__text">
+                  募集要項の下部にエントリーフォームへのリンクがありますので、そちらからエントリーください。
+                </p>
+              </li>
+              <li class="p-recruit-faq__item">
+                <h2 class="p-recruit-faq__title close">
+                  資格取得支援制度のようなものはありますか？<span
+                    class="toggle"
+                  ></span>
+                </h2>
+                <p class="p-recruit-faq__text">
+                  はい、ございます。詳細はお問い合わせフォームよりご連絡ください。
+                </p>
+              </li>
+              <li class="p-recruit-faq__item">
+                <h2 class="p-recruit-faq__title close">
+                  必要な資格が知りたいです。<span class="toggle"></span>
+                </h2>
+                <p class="p-recruit-faq__text">
+                  募集要項の「応募資格」の欄をご覧ください。資格の必要のない職種もございますので、募集要項を参照ください。
+                </p>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="p-recruit-desc">
+          <div class="p-recruit-desc__heading-wrapper">
+            <div class="c-sub-heading">
+              <h3 class="c-sub-heading__title">Job description</h3>
+              <div class="c-sub-heading__subtitle">募集要項</div>
+            </div>
+          </div>
+          <div class="p-recruit-desc__menu-wrapper">
+            <ul class="p-recruit-desc__menu">
+              <li class="p-recruit-desc__item">
+                <a
+                  href="#"
+                  data-id="menuId01"
+                  class="p-recruit-desc__link is-select"
+                  >建設業務</a
+                >
+              </li>
+              <li class="p-recruit-desc__item">
+                <a href="#" data-id="menuId02" class="p-recruit-desc__link"
+                  >事務業務</a
+                >
+              </li>
+              <li class="p-recruit-desc__item">
+                <a href="#" data-id="menuId03" class="p-recruit-desc__link"
+                  >営業業務</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <div id="menuId01" class="p-recruit-desc__content is-select">
+            <div class="p-recruit-desc__content-title">
+              <h2 class="c-heading__title">建設業務</h2>
+            </div>
+            <div class="p-recruit-desc__dl-wrapper">
+              <dl class="c-definition__list">
+                <div class="c-definition__list-item">
+                  <dt class="c-definition__term">職種</dt>
+                  <dd class="c-definition__desc">現場での建設業務</dd>
+                </div>
+                <div class="c-definition__list-item">
+                  <dt class="c-definition__term">給与</dt>
+                  <dd class="c-definition__desc">月給300,000円〜</dd>
+                </div>
+                <div class="c-definition__list-item">
+                  <dt class="c-definition__term">雇用形態</dt>
+                  <dd class="c-definition__desc">正社員（試用期間3ヶ月）</dd>
+                </div>
+                <div class="c-definition__list-item">
+                  <dt class="c-definition__term">交通費</dt>
+                  <dd class="c-definition__desc">10,000円まで支給</dd>
+                </div>
+                <div class="c-definition__list-item">
+                  <dt class="c-definition__term">勤務場所</dt>
+                  <dd class="c-definition__desc">
+                    〒000-0000
+                    <br />
+                    千葉県◯◯市◯◯丁目◯◯番
+                  </dd>
+                </div>
+                <div class="c-definition__list-item">
+                  <dt class="c-definition__term">福利厚生</dt>
+                  <dd class="c-definition__desc">
+                    雇用・労災・健康・厚生年金保険、資格取得支援、住宅手当
+                  </dd>
+                </div>
+                <div class="c-definition__list-item">
+                  <dt class="c-definition__term">勤務時間</dt>
+                  <dd class="c-definition__desc">8:30〜17:30</dd>
+                </div>
+                <div class="c-definition__list-item">
+                  <dt class="c-definition__term">休日</dt>
+                  <dd class="c-definition__desc">
+                    土・日・祝日、夏季、年末年始、有給休暇
+                  </dd>
+                </div>
+                <div class="c-definition__list-item">
+                  <dt class="c-definition__term">応募資格</dt>
+                  <dd class="c-definition__desc">
+                    未経験可　手に職を身につけたい方大歓迎
+                  </dd>
+                </div>
+              </dl>
+            </div>
+            <div class="p-recruit-desc__btn-wrapper">
+              <button class="p-recruit-desc__btn">
+                <a href=""> エントリー </a>
+              </button>
+            </div>
+          </div>
+          <div id="menuId02" class="p-recruit-desc__content">
+            <div class="p-recruit-desc__content-title">
+              <h2 class="c-heading__title">事務業務</h2>
+            </div>
+            <div class="p-recruit-desc__dl-wrapper">
+              <dl class="c-definition__list">
+                <div class="c-definition__list-item">
+                  <dt class="c-definition__term">職種</dt>
+                  <dd class="c-definition__desc">本社での事務業務</dd>
+                </div>
+                <div class="c-definition__list-item">
+                  <dt class="c-definition__term">給与</dt>
+                  <dd class="c-definition__desc">月月給180,000円〜</dd>
+                </div>
+                <div class="c-definition__list-item">
+                  <dt class="c-definition__term">雇用形態</dt>
+                  <dd class="c-definition__desc">正社員（試用期間3ヶ月）</dd>
+                </div>
+                <div class="c-definition__list-item">
+                  <dt class="c-definition__term">交通費</dt>
+                  <dd class="c-definition__desc">10,000円まで支給</dd>
+                </div>
+                <div class="c-definition__list-item">
+                  <dt class="c-definition__term">勤務場所</dt>
+                  <dd class="c-definition__desc">
+                    〒000-0000
+                    <br />
+                    千葉県◯◯市◯◯丁目◯◯番
+                  </dd>
+                </div>
+                <div class="c-definition__list-item">
+                  <dt class="c-definition__term">福利厚生</dt>
+                  <dd class="c-definition__desc">
+                    雇用・労災・健康・厚生年金保険、資格取得支援、住宅手当
+                  </dd>
+                </div>
+                <div class="c-definition__list-item">
+                  <dt class="c-definition__term">勤務時間</dt>
+                  <dd class="c-definition__desc">8:30〜17:30</dd>
+                </div>
+                <div class="c-definition__list-item">
+                  <dt class="c-definition__term">休日</dt>
+                  <dd class="c-definition__desc">
+                    土・日・祝日、夏季、年末年始、有給休暇
+                  </dd>
+                </div>
+                <div class="c-definition__list-item">
+                  <dt class="c-definition__term">応募資格</dt>
+                  <dd class="c-definition__desc">
+                    日商簿記2級　パートでも可（要相談）
+                  </dd>
+                </div>
+              </dl>
+            </div>
+            <div class="p-recruit-desc__btn-wrapper">
+              <button class="p-recruit-desc__btn">
+                <a href=""> エントリー </a>
+              </button>
+            </div>
+          </div>
+          <div id="menuId03" class="p-recruit-desc__content">
+            <div class="p-recruit-desc__content-title">
+              <h2 class="c-heading__title">営業業務</h2>
+            </div>
+            <div class="p-recruit-desc__dl-wrapper">
+              <dl class="c-definition__list">
+                <div class="c-definition__list-item">
+                  <dt class="c-definition__term">職種</dt>
+                  <dd class="c-definition__desc">本社を拠点とした営業業務</dd>
+                </div>
+                <div class="c-definition__list-item">
+                  <dt class="c-definition__term">給与</dt>
+                  <dd class="c-definition__desc">月月給350,000円〜</dd>
+                </div>
+                <div class="c-definition__list-item">
+                  <dt class="c-definition__term">雇用形態</dt>
+                  <dd class="c-definition__desc">正社員（試用期間3ヶ月）</dd>
+                </div>
+                <div class="c-definition__list-item">
+                  <dt class="c-definition__term">交通費</dt>
+                  <dd class="c-definition__desc">10,000円まで支給</dd>
+                </div>
+                <div class="c-definition__list-item">
+                  <dt class="c-definition__term">勤務場所</dt>
+                  <dd class="c-definition__desc">
+                    〒000-0000
+                    <br />
+                    千葉県◯◯市◯◯丁目◯◯番
+                  </dd>
+                </div>
+                <div class="c-definition__list-item">
+                  <dt class="c-definition__term">福利厚生</dt>
+                  <dd class="c-definition__desc">
+                    雇用・労災・健康・厚生年金保険、資格取得支援、住宅手当
+                  </dd>
+                </div>
+                <div class="c-definition__list-item">
+                  <dt class="c-definition__term">勤務時間</dt>
+                  <dd class="c-definition__desc">8:30〜17:30</dd>
+                </div>
+                <div class="c-definition__list-item">
+                  <dt class="c-definition__term">休日</dt>
+                  <dd class="c-definition__desc">
+                    土・日・祝日、夏季、年末年始、有給休暇
+                  </dd>
+                </div>
+                <div class="c-definition__list-item">
+                  <dt class="c-definition__term">応募資格</dt>
+                  <dd class="c-definition__desc">営業経験3年以上</dd>
+                </div>
+              </dl>
+            </div>
+            <div class="p-recruit-desc__btn-wrapper">
+              <button class="p-recruit-desc__btn">
+                <a href=""> エントリー </a>
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="p-recruit-form">
+          <button class="p-recruit-form__btn">
+            <a href="">
+              <div class="p-recruit-form__inner">
+                <div class="p-recruit-form__text-left">
+                  <h3 class="p-recruit-form__title">
+                    Entry form
+                    <br />
+                    <span>エントリーフォーム</span>
+                  </h3>
+                </div>
+                <div class="p-recruit-form__text-right">
+                  <div class="c-desc__link-text">View More</div>
+                  <div class="c-arrow c-arrow--round"></div>
+                </div>
+              </div>
+            </a>
+          </button>
+          <figure class="p-recruit-form__image">
+            <img src="<%= path %>assets/images/recruit/form_bg.jpg" alt="" />
+          </figure>
+        </section>
+      </main>
+      <!-- /main -->
+      <%- include('../common/_subFooter', {pageId:pageId }) %> <%-
+      include('../common/_footer', {pageId:pageId }) %>
+      <%-include('../common/_script', {pageId:pageId }) %> <%-
+      include('../common/script/_script-recruit', {pageId:pageId }) %>
+    </div>
+  </body>
+</html>
