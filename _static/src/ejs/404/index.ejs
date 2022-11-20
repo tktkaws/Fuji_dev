@@ -1,0 +1,50 @@
+<% let pageId = '404'; %> <% let path = jsonData.pages[pageId].path %>
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../common/_head', {pageId:pageId }) %>
+  <body class="">
+    <div class="wrap" ontouchstart="">
+      <%- include('../common/_header', {pageId:pageId }) %>
+      <!-- main -->
+      <main class="l-main">
+        <section class="l-hero">
+          <div class="l-hero__main-wrapper">
+            <div class="l-hero__heading-wrapper">
+              <div class="c-heading">
+                <h2 class="c-heading__title">404 Not Found</h2>
+                <div class="c-heading__subtitle">
+                  ページが見つかりませんでした
+                </div>
+              </div>
+            </div>
+            <figure class="l-hero__image">
+              <img src="<%= path %>assets/images/404/hero_404.jpg" alt="" />
+            </figure>
+          </div>
+          <div class="l-hero__breadcrumbs">
+            <a href="">top</a>ページが見つかりませんでした
+          </div>
+        </section>
+        <section class="p-notfound">
+          <h3 class="p-notfound__heading">
+            お探しのページが見つかりませんでした。
+          </h3>
+          <p class="p-notfound__desc">
+            誠に申し訳ございません。
+            <br />
+            お探しのページはURLが変更になったか、削除された可能性がございます。
+            <br />
+            大変お手数ですが、もう一度ナビゲーションよりご希望のページをお探しください。
+          </p>
+          <button class="p-notfound__btn">
+            <a href=""> トップへ戻る </a>
+          </button>
+        </section>
+      </main>
+      <!-- /main -->
+      <%- include('../common/_subFooter', {pageId:pageId }) %> <%-
+      include('../common/_footer', {pageId:pageId }) %> <%-
+      include('../common/_script', {pageId:pageId }) %>
+    </div>
+  </body>
+</html>

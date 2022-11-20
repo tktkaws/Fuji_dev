@@ -1,0 +1,199 @@
+<% let pageId = 'news-detail'; %> <% let path = jsonData.pages[pageId].path %>
+
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../../common/_head', {pageId:pageId }) %>
+  <body class="subpage js-body">
+    <div class="" ontouchstart="">
+      <%- include('../../common/_header', {pageId:pageId }) %>
+      <main>
+        <section class="l-hero">
+          <div class="l-hero__main-wrapper">
+            <div class="l-hero__heading-wrapper">
+              <div class="c-heading">
+                <h2 class="c-heading__title">News</h2>
+                <div class="c-heading__subtitle">新着情報</div>
+              </div>
+            </div>
+            <figure class="l-hero__image">
+              <!-- <img src="<%= path %>assets/images/news/hero_news.jpg" alt="" /> -->
+            </figure>
+          </div>
+          <div class="l-hero__breadcrumbs">
+            <a href="">top</a>施工実績　ホームページをリニューアルしました。
+          </div>
+        </section>
+
+        <article class="p-news-detail">
+          <div class="p-news-detail__inner">
+            <div class="p-news-detail__heading">
+              ホームページをリニューアルしました。
+            </div>
+            <div class="p-news-detail__tag-wrapper">
+              <time class="p-news-detail__date">2022.02.24</time>
+              <div class="p-news-detail__tag">お知らせ</div>
+            </div>
+
+            <figure class="p-news-detail__image">
+              <img src="<%= path %>assets/images/news/news_img01.jpg" alt="" />
+            </figure>
+            <div class="p-news-detail__sub-heading">新着情報です</div>
+            <div class="p-news-detail__block-title">新着情報です</div>
+            <div class="p-news-detail__block">
+              <p>
+                これまでの実績を築き上げてきた挑戦と経験を、未来のお客さまへ繋いでいくことをテーマにして日々のお仕事に励んでいます。
+              </p>
+              <p>
+                私たちはこれまでお客様の安全を第一に考えて参りました。
+                <br />
+                建築事業では、そんな「安全」が「人」に伝えられるよう技術力を日々高めています。
+                <br />
+                自慢の技術を是非ご覧ください。
+              </p>
+            </div>
+            <div class="p-news-detail__block-title">新着情報です</div>
+            <div class="p-news-detail__block">
+              <p>
+                これまでの実績を築き上げてきた挑戦と経験を、未来のお客さまへ繋いでいくことをテーマにして日々のお仕事に励んでいます。
+              </p>
+              <p>
+                私たちはこれまでお客様の安全を第一に考えて参りました。
+                <br />
+                建築事業では、そんな「安全」が「人」に伝えられるよう技術力を日々高めています。
+                <br />
+                自慢の技術を是非ご覧ください。
+              </p>
+            </div>
+            <div class="p-news-detail__sns">
+              <ul class="p-news-detail__socialList">
+                <li class="p-news-detail__socialItem">
+                  <a
+                    href="https://twitter.com/share?url="
+                    class="p-news-detail__socialLink --twitter"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <img
+                      src="<%= path %>assets/images/common/twitter_icon.svg"
+                      alt=""
+                    />
+                    <span class="icon"></span>
+                  </a>
+                </li>
+                <li class="p-news-detail__socialItem">
+                  <a
+                    href="http://www.facebook.com/share.php?u="
+                    class="p-news-detail__socialLink --facebook"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                  >
+                    <img
+                      src="<%= path %>assets/images/common/facebook_icon.svg"
+                      alt=""
+                    />
+                    <span class="icon"></span>
+                  </a>
+                </li>
+                <li class="p-news-detail__socialItem">
+                  <a
+                    title="クリップボードにURLをコピー"
+                    class="share-url p-news-detail__socialLink --copy"
+                    href="javascript:void(0);"
+                    data-clipboard-text="ここに記事タイトルとURLを出力させます"
+                  >
+                    <img
+                      src="<%= path %>assets/images/common/clipboard_icon.svg"
+                      alt=""
+                    />
+                    <span class="icon"></span>
+                  </a>
+                  <span class="url-copied">
+                    <span>URLをコピーしました！</span>
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <div class="p-news-detail__btn-wrapper">
+              <button class="p-news-detail__btn">
+                <a href=""> Back to List </a>
+              </button>
+            </div>
+            <div class="p-news-detail__related-news">
+              <div class="p-news-detail__related-news-heading">
+                Related News
+              </div>
+              <div class="p-news__card-wrapper">
+                <ul class="p-news__card-list">
+                  <li class="p-news__card">
+                    <a href="">
+                      <div class="p-news__card-inner">
+                        <figure class="p-news__card-image">
+                          <img
+                            src="<%= path %>assets/images/news/news_img01.jpg"
+                            alt=""
+                          />
+                        </figure>
+
+                        <time>2022.02.24</time>
+                        <p class="p-news__card-tag">お知らせ</p>
+                        <!-- <div class="p-news__card-tag">お知らせ</div> -->
+                        <div class="p-news__card-title">
+                          ホームページをリニューアルしました。
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="p-news__card">
+                    <a href="">
+                      <div class="p-news__card-inner">
+                        <figure class="p-news__card-image">
+                          <img
+                            src="<%= path %>assets/images/news/news_img02.jpg"
+                            alt=""
+                          />
+                        </figure>
+
+                        <time>2022.02.24</time>
+                        <p class="p-news__card-tag">お知らせ</p>
+                        <!-- <div class="p-news__card-tag">お知らせ</div> -->
+                        <div class="p-news__card-title">
+                          採用情報を更新しました。
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+
+                  <li class="p-news__card">
+                    <a href="">
+                      <div class="p-news__card-inner">
+                        <figure class="p-news__card-image">
+                          <img
+                            src="<%= path %>assets/images/news/news_img03.jpg"
+                            alt=""
+                          />
+                        </figure>
+
+                        <time>2022.02.24</time>
+                        <p class="p-news__card-tag">ブログ</p>
+                        <!-- <div class="p-news__card-tag">お知らせ</div> -->
+                        <div class="p-news__card-title">
+                          ◯◯にて弊社代表のスピーチが実施されました。
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </article>
+      </main>
+
+      <%- include('../../common/_subFooter', {pageId:pageId }) %> <%-
+      include('../../common/_footer', {pageId:pageId }) %> <%-
+      include('../../common/_script', {pageId:pageId }) %> <%-
+      include('../../common/script/_script-newsdetail', {pageId:pageId }) %>
+    </div>
+  </body>
+</html>

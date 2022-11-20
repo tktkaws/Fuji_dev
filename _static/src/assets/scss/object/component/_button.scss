@@ -40,3 +40,17 @@
     color: $c-accent;
   }
 }
+
+.c-btn--back {
+  display: block;
+  background-color: $c-black;
+  max-width: 555px;
+  width: 555px;
+  height: 68px;
+  text-align: center;
+  color: $c-white;
+  @include mq(sm) {
+    // width: 350px;
+    width: min(86vw, 350px);
+  }
+}
