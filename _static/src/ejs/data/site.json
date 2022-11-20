@@ -45,6 +45,13 @@
       "type": "article",
       "slug": "service/index.html",
       "path": "../"
+    },
+    "works-detail": {
+      "name": "Works詳細",
+      "description": "「過去と未来を繋ぎ続ける」そんな会社を目指す技術集団が、藤原建設工業です。",
+      "type": "article",
+      "slug": "works/detail/index.html",
+      "path": "../../"
     }
   }
 }

@@ -21,6 +21,14 @@ module.exports = {
       "service.js"
     ),
     sample: path.join(__dirname, "_static", "src", "assets", "js", "sample.js"),
+    worksdetail: path.join(
+      __dirname,
+      "_static",
+      "src",
+      "assets",
+      "js",
+      "worksdetail.js"
+    ),
   },
 
   resolve: {
