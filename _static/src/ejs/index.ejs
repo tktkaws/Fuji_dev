@@ -2,9 +2,15 @@
 <!DOCTYPE html>
 <html lang="ja">
   <%- include('./common/_head', {pageId:pageId }) %>
-  <body class="home">
-    <div id="top" class="wrap" ontouchstart="">
+  <body id="js-body" class="home js-body">
+    <div id="top" class="" ontouchstart="">
       <%- include('./common/_header', {pageId:pageId }) %>
+      <!-- mouse cursor -->
+      <div id="js-cursor" class="p-cursor"></div>
+      <div id="js-chaser" class="p-chaser">
+        <p class="text">DRAG</p>
+      </div>
+      <!-- /mouse cursor -->
       <!-- main -->
       <main class="l-main">
         <section class="p-home-kv">
@@ -448,12 +454,6 @@
               </div>
 
               <!-- splide -->
-              <!-- mouse cursor -->
-              <div id="js-cursor" class="p-cursor"></div>
-              <div id="js-chaser" class="p-chaser">
-                <p class="text">DRAG</p>
-              </div>
-              <!-- /mouse cursor -->
 
               <!-- c-text-loop -->
               <div class="c-text-loop">

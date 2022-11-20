@@ -3,7 +3,10 @@ homeSlider
 ・Worksのスライダー
 ==============================================================*/
 import Splide from "../external/splide.min.js";
-// import { SlideNumber } from './slideNumber';
+// import { SlideNumber } from "./slideNumber";
+
+// import Splide from "@splidejs/splide";
+// import { SlideNumber } from "./slideNumber";
 
 // Worksのスライダー
 var splide = new Splide("#js-slider-works", {
