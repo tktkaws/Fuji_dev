@@ -1,0 +1,282 @@
+<% let pageId = 'contact'; %> <% let path = jsonData.pages[pageId].path %>
+<!DOCTYPE html>
+<html lang="ja">
+  <%- include('../common/_head', {pageId:pageId }) %>
+  <script src="https://ajaxzip3.github.io/ajaxzip3.js" charset="UTF-8"></script>
+  <body class="">
+    <div class="wrap" ontouchstart="">
+      <%- include('../common/_header', {pageId:pageId }) %>
+      <!-- main -->
+      <main class="l-main">
+        <section class="l-hero">
+          <div class="l-hero__main-wrapper">
+            <div class="l-hero__heading-wrapper">
+              <div class="c-heading">
+                <h2 class="c-heading__title">Contact</h2>
+                <div class="c-heading__subtitle">お問い合わせ</div>
+              </div>
+            </div>
+            <figure class="l-hero__image">
+              <!-- <img src="<%= path %>assets/images/works/hero_works.jpg" alt="" /> -->
+            </figure>
+          </div>
+          <div class="l-hero__breadcrumbs"><a href="">top</a>お問い合わせ</div>
+        </section>
+        <section class="l-form">
+          <div class="l-form__inner">
+            <div class="l-form__info">
+              <p class="l-form__info-desc">
+                弊社に興味を持って下さりありがとうございます。
+                <br />
+                藤原建設工業へのお問い合わせは、以下のフォームかお電話にて承っております。
+              </p>
+
+              <div class="c-cta">
+                <dt class="c-cta__dt">
+                  tel
+                  <span class="--sub">お電話でのお問い合わせ</span>
+                </dt>
+                <dd class="c-cta__dd">
+                  00-0000-0000
+                  <span class="--sub">受付時間：平日9:00〜17:00</span>
+                </dd>
+              </div>
+            </div>
+            <div class="l-form__sub-heading-wrapper">
+              <div class="c-sub-heading">
+                <h3 class="c-sub-heading__title">Form</h3>
+                <div class="c-sub-heading__subtitle">お問い合わせフォーム</div>
+              </div>
+            </div>
+            <p class="l-form__caution">
+              ※全て必須項目となっております。
+              <br />
+              ※最後まで入力した後、送信ボタンを押してください。
+            </p>
+            <div class="l-form__progress-wrapper">
+              <div class="l-form__progress is-active">入力</div>
+              <div class="l-form__progress">確認</div>
+              <div class="l-form__progress">完了</div>
+            </div>
+            <div class="l-form__form-wrapper">
+              <dl class="l-form__list">
+                <div class="l-form__item">
+                  <dt class="l-form__dt">お問い合わせの種別</dt>
+                  <dd class="l-form__dd -select">
+                    <div class="l-form__selectWrap">
+                      <select name="type" id="" class="select">
+                        <option value selected="selected">
+                          選択してください
+                        </option>
+                        <option value="お問い合わせ">お問い合わせ</option>
+                        <option value="資料請求">資料請求</option>
+                      </select>
+                    </div>
+                  </dd>
+                </div>
+
+                <div class="l-form__item">
+                  <dt class="l-form__dt">会社名</dt>
+                  <dd class="l-form__dd -company">
+                    <span>
+                      <input
+                        type="text"
+                        name=""
+                        placeholder=""
+                        required=""
+                        class=""
+                      />
+                    </span>
+                  </dd>
+                </div>
+                <div class="l-form__item">
+                  <dt class="l-form__dt">お名前</dt>
+                  <dd class="l-form__dd">
+                    <span>
+                      <input
+                        type="text"
+                        name=""
+                        placeholder="山田太郎"
+                        required=""
+                        class=""
+                      />
+                    </span>
+                  </dd>
+                </div>
+                <div class="l-form__item">
+                  <dt class="l-form__dt">フリガナ</dt>
+                  <dd class="l-form__dd">
+                    <span>
+                      <input
+                        type="text"
+                        name=""
+                        placeholder=""
+                        required=""
+                        class=""
+                      />
+                    </span>
+                  </dd>
+                </div>
+                <div class="l-form__item">
+                  <dt class="l-form__dt">メールアドレス</dt>
+                  <dd class="l-form__dd">
+                    <span>
+                      <input
+                        type="text"
+                        name=""
+                        placeholder=""
+                        required=""
+                        class=""
+                      />
+                    </span>
+                  </dd>
+                </div>
+                <div class="l-form__item">
+                  <dt class="l-form__dt">電話番号</dt>
+                  <dd class="l-form__dd">
+                    <span>
+                      <input
+                        type="text"
+                        name=""
+                        placeholder=""
+                        required=""
+                        class=""
+                      />
+                    </span>
+                  </dd>
+                </div>
+
+                <div class="l-form__item">
+                  <dt class="l-form__dt">郵便番号</dt>
+                  <dd class="l-form__dd --half">
+                    <span>
+                      <input
+                        type="text"
+                        name="郵便番号"
+                        placeholder=""
+                        required=""
+                        class="zip-button"
+                      />
+                    </span>
+                  </dd>
+                </div>
+                <div class="l-form__item">
+                  <dt class="l-form__dt">都道府県</dt>
+                  <dd class="l-form__dd --half">
+                    <span>
+                      <input
+                        type="text"
+                        name="都道府県"
+                        placeholder=""
+                        required=""
+                        class=""
+                      />
+                    </span>
+                  </dd>
+                </div>
+                <div class="l-form__item">
+                  <dt class="l-form__dt">市区町村</dt>
+                  <dd class="l-form__dd">
+                    <span>
+                      <input
+                        type="text"
+                        name="市区町村"
+                        placeholder=""
+                        required=""
+                        class=""
+                      />
+                    </span>
+                  </dd>
+                </div>
+                <div class="l-form__item">
+                  <dt class="l-form__dt">番地・建物名</dt>
+                  <dd class="l-form__dd">
+                    <span>
+                      <input
+                        type="text"
+                        name="番地・建物名"
+                        placeholder=""
+                        required=""
+                        class=""
+                      />
+                    </span>
+                  </dd>
+                </div>
+
+                <div class="l-form__item --radio">
+                  <dt class="l-form__dt">弊社を知ったきっかけ</dt>
+                  <dd class="l-form__dd --radio">
+                    <span class="-flex">
+                      <input
+                        type="radio"
+                        name="chance"
+                        id="flyers"
+                        value="チラシ"
+                      />
+                      <label
+                        for="flyers"
+                        class="l-form__label mwform-radio-field-text"
+                        >チラシ</label
+                      >
+                    </span>
+                    <span class="-flex">
+                      <input type="radio" name="chance" id="sns" value="SNS" />
+                      <label
+                        for="sns"
+                        class="l-form__label mwform-radio-field-text"
+                        >SNS</label
+                      >
+                    </span>
+                    <span class="-flex">
+                      <input
+                        type="radio"
+                        name="chance"
+                        id="search"
+                        value="ネット検索"
+                      />
+                      <label
+                        for="search"
+                        class="l-form__label mwform-radio-field-text"
+                        >ネット検索</label
+                      >
+                    </span>
+                  </dd>
+                </div>
+
+                <div class="l-form__item -message">
+                  <dt class="l-form__dt -message">お問い合わせ内容</dt>
+                  <dd class="l-form__dd">
+                    <textarea
+                      name=""
+                      placeholder="ダミーテキストです。ダミーテキストです。ダミーテキストです。ダミーテキストです。ダミーテキストです。ダミーテキストです。ダミーテキストです。ダミーテキストです。"
+                      required=""
+                      class=""
+                    ></textarea>
+                  </dd>
+                </div>
+              </dl>
+
+              <span class="l-form__privacy">
+                <label>
+                  <input type="checkbox" name="" value="1" />
+                  <span class="l-form__privacyText"
+                    ><a href="<%= path %>privacy">プライバシーポリシー</a
+                    >に同意する</span
+                  >
+                </label>
+              </span>
+              <div class="l-form__submit -submit">
+                <input type="submit" value="内容の確認" class="l-form__btn" />
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <!-- /main -->
+      <%- include('../common/_subFooter', {pageId:pageId }) %> <%-
+      include('../common/_footer', {pageId:pageId }) %> <%-
+      include('../common/_script', {pageId:pageId }) %> <%-
+      include('../common/script/_script-contact', {pageId:pageId }) %>
+    </div>
+  </body>
+</html>
