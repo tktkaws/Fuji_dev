@@ -40,23 +40,13 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _ext
 
 /***/ }),
 
-/***/ "./_static/src/assets/js/modules/sliderCursor.js":
-/*!*******************************************************!*\
-  !*** ./_static/src/assets/js/modules/sliderCursor.js ***!
-  \*******************************************************/
-/***/ (function() {
-
-eval("/*==============================================================\n  TOP Worksのマウスストーカー\n==============================================================*/\n\nvar cursor = document.getElementById(\"js-cursor\"),\n  chaser = document.getElementById(\"js-chaser\"),\n  target = document.querySelector(\".p-home-works__sliderTrack\"),\n  body = document.querySelector(\".js-body\");\nvar delay = 10,\n  cursorPosX = 0,\n  cursorPosY = 0,\n  chaserPosX = 0,\n  chaserPosY = 0;\n\n// カーソルの遅延アニメーション\nTweenMax.to({}, 0.001, {\n  repeat: -1,\n  onRepeat: function onRepeat() {\n    chaserPosX += (cursorPosX - chaserPosX) / delay;\n    chaserPosY += (cursorPosY - chaserPosY) / delay;\n    TweenMax.set(cursor, {\n      css: {\n        left: cursorPosX - cursor.clientWidth / 2,\n        top: cursorPosY - cursor.clientWidth / 2\n      }\n    });\n    TweenMax.set(chaser, {\n      css: {\n        left: chaserPosX - chaser.clientWidth / 2,\n        top: chaserPosY - chaser.clientWidth / 2\n      }\n    });\n  }\n});\n\n// マウス座標を取得\ndocument.onmousemove = function (event) {\n  cursorPosX = event.pageX;\n  cursorPosY = event.pageY;\n};\n\n// マウスオーバー時の処理\ntarget.onmouseover = function () {\n  cursor.classList.add(\"is-active\");\n  chaser.classList.add(\"is-active\");\n  body.classList.add(\"is-active\");\n};\n\n// マウスアウト時の処理\ntarget.onmouseout = function () {\n  cursor.classList.remove(\"is-active\");\n  chaser.classList.remove(\"is-active\");\n  body.classList.remove(\"is-active\");\n};\n\n//# sourceURL=webpack://cording_template/./_static/src/assets/js/modules/sliderCursor.js?");
-
-/***/ }),
-
 /***/ "./_static/src/assets/js/top.js":
 /*!**************************************!*\
   !*** ./_static/src/assets/js/top.js ***!
   \**************************************/
 /***/ (function(__unused_webpack_module, __unused_webpack_exports, __webpack_require__) {
 
-eval("// require('./modules/microModal');\n__webpack_require__(/*! ./modules/fixedButton */ \"./_static/src/assets/js/modules/fixedButton.js\");\n__webpack_require__(/*! ./modules/homeSlider */ \"./_static/src/assets/js/modules/homeSlider.js\");\n__webpack_require__(/*! ./modules/sliderCursor */ \"./_static/src/assets/js/modules/sliderCursor.js\");\n\n//# sourceURL=webpack://cording_template/./_static/src/assets/js/top.js?");
+eval("// require('./modules/microModal');\n__webpack_require__(/*! ./modules/fixedButton */ \"./_static/src/assets/js/modules/fixedButton.js\");\n__webpack_require__(/*! ./modules/homeSlider */ \"./_static/src/assets/js/modules/homeSlider.js\");\n\n//# sourceURL=webpack://cording_template/./_static/src/assets/js/top.js?");
 
 /***/ })
 
