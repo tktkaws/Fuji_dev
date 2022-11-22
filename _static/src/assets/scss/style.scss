@@ -8,12 +8,6 @@
 @use "./foundation/reset";
 @use "./foundation/function";
 @use "./foundation/global";
-/*-------------------
-  * lib
-  -------------------*/
-@use "./lib/swiper.min.css";
-@use "./lib/splide.min.css";
-@use "./lib/glightbox";
 
 /*--------------------------------------*
 * layout
@@ -69,3 +63,10 @@
   * utility
   -------------------*/
 @use "./object/utility/display";
+/*-------------------
+  * lib
+  -------------------*/
+
+@use "./lib/splide.min.css";
+@use "./lib/glightbox";
+@use "./lib/swiper.min.css";
