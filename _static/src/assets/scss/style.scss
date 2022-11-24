@@ -59,6 +59,8 @@
 @use "./object/project/recruit-form";
 @use "./object/project/fixed-button";
 @use "./object/project/p-cursor";
+@use "./object/project/p-loading";
+@use "./object/project/p-home-catch";
 
 /*-------------------
   * utility
@@ -71,3 +73,4 @@
 @use "./lib/splide.min.css";
 @use "./lib/glightbox";
 @use "./lib/swiper.min.css";
+// @use "./lib/sample";
