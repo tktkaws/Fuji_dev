@@ -217,6 +217,7 @@
 .p-cursor {
   &.is-active {
     z-index: 1001;
+    cursor: none;
   }
 }
 

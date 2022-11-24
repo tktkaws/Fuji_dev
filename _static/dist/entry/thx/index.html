@@ -20,17 +20,10 @@
    <link rel="stylesheet" href="../../assets/css/style.css" />
    <!-- Remove "outline" when in focus(other than keyboard operation) -->
    <script src="https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js" integrity="sha384-xRa5B8rCDfdg0npZcxAh+RXswrbFk3g6dlHVeABeluN8EIwdyljz/LqJgc2R3KNA" crossorigin="anonymous" defer></script>
-   <!-- ファイルからの読み込みに切り替える TOP/KVはこれがないと動かない -->
-   <!-- <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-  />
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
  </head>
  <body class="subpage">
    <div class="" ontouchstart="">
-     <header class="l-header" id="js-top">
+     <header id="js-header" class="l-header">
        <div class="l-header__inner">
          <figure class="l-header__logo">
            <a href="">
@@ -167,13 +160,26 @@
        <!-- mobile-nav -->
      </header>
      <main class="l-main">
-       <section class="l-hero">
+       <section class="l-hero" id="js-top">
          <div class="l-hero__main-wrapper">
            <div class="l-hero__heading-wrapper">
-             <div class="c-heading">
-               <h2 class="c-heading__title">Entry Form</h2>
-               <div class="c-heading__subtitle">エントリーフォーム</div>
-             </div>
+             <!-- l-section-title -->
+             <h2 class="l-section__title js-title load">
+               <span class="l-section__titleTextWrap">
+                 <span class="l-section__titleText">E</span>
+                 <span class="l-section__titleText">n</span>
+                 <span class="l-section__titleText">t</span>
+                 <span class="l-section__titleText">r</span>
+                 <span class="l-section__titleText">y</span>
+                 <span class="l-section__titleText">&nbsp;</span>
+                 <span class="l-section__titleText">F</span>
+                 <span class="l-section__titleText">o</span>
+                 <span class="l-section__titleText">r</span>
+                 <span class="l-section__titleText">m</span>
+               </span>
+               <span class="-jp">エントリーフォーム</span>
+             </h2>
+             <!-- l-section-title -->
            </div>
            <figure class="l-hero__image">
              <!-- <img src="../../assets/images/works/hero_works.jpg" alt="" /> -->

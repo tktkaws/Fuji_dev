@@ -194,11 +194,37 @@
     }
   }
   &__btn {
+    transition: background-color 0.5s ease, color 0.5s ease;
+    &:hover {
+      background-color: $c-white;
+      color: $c-black;
+    }
   }
 
   &__ {
   }
 }
+
+// .c-list-button {
+//   padding: rem(22) rem(32.5);
+//   border: 1px solid $color-line;
+//   color: $color-text;
+//   transition: border 0.5s ease;
+
+//   @include font(20, 22, 400, 150, rem);
+//   &.-eng {
+//     padding: rem(22) rem(35);
+//     font-family: $font-family-en;
+
+//     @include font(20, 22, 400, 0, rem);
+//   }
+//   &:hover {
+//     border: 1px solid $color-text;
+//   }
+//   &.is-btn-hidden {
+//     display: none;
+//   }
+// }
 
 // radio
 
