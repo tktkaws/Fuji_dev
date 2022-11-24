@@ -3,7 +3,7 @@ homeSlider
 ・Worksのスライダー
 ==============================================================*/
 import Splide from "../external/splide.min.js";
-// import { SlideNumber } from "./slideNumber";
+import { SlideNumber } from "./slideNumber";
 
 // import Splide from "@splidejs/splide";
 // import { SlideNumber } from "./slideNumber";
@@ -32,7 +32,8 @@ var splide = new Splide("#js-slider-works", {
       drag: true,
       perPage: 1,
       speed: 250,
-      fixedWidth: "34.615%",
+      // fixedWidth: "34.615%",
+      fixedWidth: "24.615%",
       gap: "3.846%",
       focus: "center",
       trimSpace: "false",
@@ -40,4 +41,4 @@ var splide = new Splide("#js-slider-works", {
   },
 });
 
-splide.mount();
+splide.mount({ SlideNumber });

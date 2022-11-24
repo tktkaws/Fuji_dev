@@ -4,31 +4,64 @@ const $ = jQuery;
 /*==============================================================
   ・TOP kvslider
 ==============================================================*/
-const sliderThumbnail = new Swiper(".swiper-container-text", {
-  slidesPerView: 1,
+// const sliderThumbnail = new Swiper(".swiper-container-text", {
+//   slidesPerView: 1,
 
-  loop: true,
-  effect: "fade",
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
-  speed: 500,
-});
+//   loop: true,
+//   effect: "fade",
+//   autoplay: {
+//     delay: 4000,
+//     disableOnInteraction: false,
+//   },
+//   speed: 500,
+// });
 
-const mySwiper = new Swiper(".swiper", {
-  // Optional parameters
-  loop: true,
-  effect: "fade",
-  autoplay: {
-    delay: 4000,
-    // delay: 12000,
-    disableOnInteraction: false,
-  },
-  speed: 500,
-  thumbs: {
-    swiper: sliderThumbnail,
-  },
+// const mySwiper = new Swiper(".swiper", {
+//   // Optional parameters
+//   loop: true,
+//   effect: "fade",
+//   autoplay: {
+//     delay: 4000,
+//     // delay: 12000,
+//     disableOnInteraction: false,
+//   },
+//   speed: 500,
+//   thumbs: {
+//     swiper: sliderThumbnail,
+//   },
+// });
+
+// KVのスライダー
+window.addEventListener("load", function () {
+  setTimeout(function () {
+    // TOP KV Slider（text）
+    const sliderThumbnail = new Swiper(".swiper-container-text", {
+      slidesPerView: 1,
+
+      loop: true,
+      effect: "fade",
+      autoplay: {
+        delay: 4000,
+        disableOnInteraction: false,
+      },
+      speed: 500,
+    });
+
+    const mySwiper = new Swiper(".swiper", {
+      // Optional parameters
+      loop: true,
+      effect: "fade",
+      autoplay: {
+        delay: 4000,
+        // delay: 12000,
+        disableOnInteraction: false,
+      },
+      speed: 500,
+      thumbs: {
+        swiper: sliderThumbnail,
+      },
+    });
+  }, 3300);
 });
 
 /*==============================================================
