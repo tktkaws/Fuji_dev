@@ -192,14 +192,14 @@
 
 // マウスストーカー
 
-body {
-  &.js-body {
-    &.is-active {
-      position: relative;
-      cursor: none;
-    }
-  }
-}
+// body {
+//   &.js-body {
+//     &.is-active {
+//       position: relative;
+//       cursor: none;
+//     }
+//   }
+// }
 
 .p-cursor,
 .p-chaser {
@@ -217,6 +217,7 @@ body {
 .p-cursor {
   &.is-active {
     z-index: 1001;
+    cursor: none;
   }
 }
 

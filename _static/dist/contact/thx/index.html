@@ -20,23 +20,10 @@
    <link rel="stylesheet" href="../../assets/css/style.css" />
    <!-- Remove "outline" when in focus(other than keyboard operation) -->
    <script src="https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js" integrity="sha384-xRa5B8rCDfdg0npZcxAh+RXswrbFk3g6dlHVeABeluN8EIwdyljz/LqJgc2R3KNA" crossorigin="anonymous" defer></script>
-   <!-- ファイルからの読み込みに切り替える TOPはこれがないと動かない -->
-   <!-- <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-  />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-  <script
-    type="text/javascript"
-    src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"
-  ></script>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
  </head>
  <body class="subpage">
    <div class="" ontouchstart="">
-     <header class="l-header" id="js-top">
+     <header id="js-header" class="l-header">
        <div class="l-header__inner">
          <figure class="l-header__logo">
            <a href="">
@@ -173,13 +160,23 @@
        <!-- mobile-nav -->
      </header>
      <main class="l-main">
-       <section class="l-hero">
+       <section class="l-hero" id="js-top">
          <div class="l-hero__main-wrapper">
            <div class="l-hero__heading-wrapper">
-             <div class="c-heading">
-               <h2 class="c-heading__title">Contact</h2>
-               <div class="c-heading__subtitle">お問い合わせ</div>
-             </div>
+             <!-- l-section-title -->
+             <h2 class="l-section__title js-title load">
+               <span class="l-section__titleTextWrap">
+                 <span class="l-section__titleText">C</span>
+                 <span class="l-section__titleText">o</span>
+                 <span class="l-section__titleText">n</span>
+                 <span class="l-section__titleText">t</span>
+                 <span class="l-section__titleText">a</span>
+                 <span class="l-section__titleText">c</span>
+                 <span class="l-section__titleText">t</span>
+               </span>
+               <span class="-jp">お問い合わせ</span>
+             </h2>
+             <!-- l-section-title -->
            </div>
            <figure class="l-hero__image">
              <!-- <img src="../../assets/images/works/hero_works.jpg" alt="" /> -->

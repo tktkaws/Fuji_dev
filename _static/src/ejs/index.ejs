@@ -2,34 +2,100 @@
 <!DOCTYPE html>
 <html lang="ja">
   <%- include('./common/_head', {pageId:pageId }) %>
-  <body class="home">
-    <div id="top" class="wrap" ontouchstart="">
+  <body id="js-body" class="home js-body">
+    <div id="top" class="" ontouchstart="">
       <%- include('./common/_header', {pageId:pageId }) %>
+      <!-- mouse cursor -->
+      <div id="js-cursor" class="p-cursor"></div>
+      <div id="js-chaser" class="p-chaser">
+        <p class="text">DRAG</p>
+      </div>
+      <!-- /mouse cursor -->
       <!-- main -->
       <main class="l-main">
-        <section class="p-home-kv">
+        <!-- loading -->
+        <div id="js-loading" class="p-loading">
+          <div id="js-loading-bg" class="js-loading__bg p-loading__bg">
+            <figure id="js-logo" class="p-loading__logo">
+              <img
+                src="<%= path %>assets/images/common/loading_logo.svg"
+                alt="藤原建設工業"
+              />
+            </figure>
+          </div>
+        </div>
+        <!-- /loading -->
+
+        <section class="p-home-kv" id="js-top">
           <div class="p-home-kv__grid-wrapper">
+            <div class="p-home-kv__text-wrapper">
+              <h2 id="js-catch" class="p-home-catch__eng js-catch">
+                <div class="p-home-catch__engWrap">
+                  <span class="p-home-catch__engText">H</span>
+                  <span class="p-home-catch__engText">o</span>
+                  <span class="p-home-catch__engText">w</span>
+                  <span class="p-home-catch__engText">&nbsp;</span>
+                  <span class="p-home-catch__engText">F</span>
+                  <span class="p-home-catch__engText">a</span>
+                  <span class="p-home-catch__engText">r</span>
+                </div>
+                <div class="p-home-catch__engBlock">
+                  <div class="p-home-catch__engWrap">
+                    <span class="p-home-catch__engText">C</span>
+                    <span class="p-home-catch__engText">a</span>
+                    <span class="p-home-catch__engText">n</span>
+                  </div>
+                  <div class="p-home-catch__engWrap">
+                    <span class="p-home-catch__engText u-only-pc">&nbsp;</span>
+                    <span class="p-home-catch__engText">W</span>
+                    <span class="p-home-catch__engText">e</span>
+                    <span class="p-home-catch__engText">&nbsp;</span>
+                    <span class="p-home-catch__engText">G</span>
+                    <span class="p-home-catch__engText">o</span>
+                    <span class="p-home-catch__engText">?</span>
+                  </div>
+                </div>
+              </h2>
+              <p id="js-catch-text" class="p-home-catch__text">
+                「どこまでいけるか」<br />お客さまと挑戦し続ける未来を<br
+                  class="u-only-sp"
+                />築いていきます。
+              </p>
+            </div>
+
             <!-- swiper-container -->
             <div class="p-home-kv__swiper-container">
               <div class="swiper">
                 <div class="swiper-wrapper">
                   <div class="swiper-slide">
-                    <img
-                      src="<%= path %>assets/images/home/slider01.jpg"
-                      alt="slider01"
-                    />
+                    <div class="slide-img">
+                      <figure>
+                        <img
+                          src="<%= path %>assets/images/home/slider01.jpg"
+                          alt="slider01"
+                        />
+                      </figure>
+                    </div>
                   </div>
                   <div class="swiper-slide">
-                    <img
-                      src="<%= path %>assets/images/home/slider02.jpg"
-                      alt="slider02"
-                    />
+                    <div class="slide-img">
+                      <figure>
+                        <img
+                          src="<%= path %>assets/images/home/slider02.jpg"
+                          alt="slider02"
+                        />
+                      </figure>
+                    </div>
                   </div>
                   <div class="swiper-slide">
-                    <img
-                      src="<%= path %>assets/images/home/slider03.jpg"
-                      alt="slider03"
-                    />
+                    <div class="slide-img">
+                      <figure>
+                        <img
+                          src="<%= path %>assets/images/home/slider03.jpg"
+                          alt="slider03"
+                        />
+                      </figure>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -103,19 +169,9 @@
               </div>
             </div>
             <!-- swiper-container-text -->
-            <div class="p-home-kv__text-wrapper">
-              <h2 class="p-home-kv__title">
-                How Far<br />
-                Can We Go?
-              </h2>
-              <h3 class="p-home-kv__subtitle"></h3>
-              <p class="p-home-kv__desc">
-                「どこまでいけるか」<br />
-                お客さまと挑戦し続ける未来を築いていきます。
-              </p>
-            </div>
+
             <!-- scroll-animation -->
-            <div class="p-scroll"></div>
+            <div class="p-scroll" id="js-scroll"></div>
           </div>
         </section>
         <div class="l-overlay"></div>
@@ -123,12 +179,16 @@
           <section class="p-home-about">
             <div class="p-home-about__inner">
               <div class="p-home-about__text-container">
-                <!-- c-heading -->
-                <div class="c-heading">
-                  <h2 class="c-heading__title">About</h2>
-                  <div class="c-heading__subtitle">会社情報</div>
-                </div>
-                <!-- c-heading -->
+                <h2 class="l-section__title js-title inview">
+                  <span class="l-section__titleTextWrap">
+                    <span class="l-section__titleText">A</span>
+                    <span class="l-section__titleText">b</span>
+                    <span class="l-section__titleText">o</span>
+                    <span class="l-section__titleText">u</span>
+                    <span class="l-section__titleText">t</span>
+                  </span>
+                  <span class="-jp">会社情報</span>
+                </h2>
                 <!-- c-desc -->
                 <div class="c-desc">
                   <div class="c-desc__text">
@@ -171,12 +231,20 @@
           <section class="p-home-service">
             <div class="p-home-service__inner">
               <div class="p-home-service__heading">
-                <!-- c-heading -->
-                <div class="c-heading">
-                  <h2 class="c-heading__title">Service</h2>
-                  <div class="c-heading__subtitle">事業内容</div>
-                </div>
-                <!-- c-heading -->
+                <!-- l-section-title -->
+                <h2 class="l-section__title js-title inview">
+                  <span class="l-section__titleTextWrap">
+                    <span class="l-section__titleText">S</span>
+                    <span class="l-section__titleText">e</span>
+                    <span class="l-section__titleText">r</span>
+                    <span class="l-section__titleText">v</span>
+                    <span class="l-section__titleText">i</span>
+                    <span class="l-section__titleText">c</span>
+                    <span class="l-section__titleText">e</span>
+                  </span>
+                  <span class="-jp">事業内容</span>
+                </h2>
+                <!-- l-section-title -->
                 <!-- c-desc -->
                 <div class="c-desc">
                   <div class="c-desc__text">
@@ -331,12 +399,20 @@
           </section>
           <section class="p-home-works">
             <div class="p-home-works__inner">
-              <!-- c-heading -->
-              <div class="c-heading">
-                <h2 class="c-heading__title">Works</h2>
-                <div class="c-heading__subtitle">施工実績</div>
+              <div class="p-home-works__title-wrapper">
+                <!-- l-section-title -->
+                <h2 class="l-section__title js-title inview">
+                  <span class="l-section__titleTextWrap">
+                    <span class="l-section__titleText">W</span>
+                    <span class="l-section__titleText">o</span>
+                    <span class="l-section__titleText">r</span>
+                    <span class="l-section__titleText">k</span>
+                    <span class="l-section__titleText">s</span>
+                  </span>
+                  <span class="-jp">施工実績</span>
+                </h2>
+                <!-- l-section-title -->
               </div>
-              <!-- c-heading -->
 
               <!-- splide -->
               <div
@@ -347,113 +423,102 @@
                 <div class="p-home-works__sliderTrack splide__track">
                   <ul class="p-home-works__sliderWrapper splide__list">
                     <!-- スライダーのコンテンツ -->
-                    <li class="p-home-works__slide splide__slide">
-                      <a href="" class="p-home-works__slideLink">
-                        <div class="p-home-works__item slide-img">
-                          <figure>
-                            <img
-                              src="assets/images/home/works_img01.jpg"
-                              alt=""
-                            />
-                            <span class="p-home-works__itemTag -archi"
-                              >建築</span
-                            >
-                          </figure>
-                          <div class="p-home-works__info">
-                            <h3 class="p-home-works__title">◯◯ビル工事</h3>
-                            <time>2022.02.24</time>
-                          </div>
+                    <li class="p-works-category__card --archi splide__slide">
+                      <a href="">
+                        <figure class="p-works-category__image">
+                          <img
+                            src="<%= path %>assets/images/works/works_img01.jpg"
+                            alt=""
+                          />
+                        </figure>
+                        <div class="p-works-category__card-text-wrapper">
+                          <p class="p-works-category__card-title">◯◯ビル</p>
+                          <p class="p-works-category__card-date">2022.02.24</p>
                         </div>
                       </a>
                     </li>
-                    <li class="p-home-works__slide splide__slide">
-                      <a href="" class="p-home-works__slideLink">
-                        <div class="p-home-works__item slide-img">
-                          <figure>
-                            <img
-                              src="assets/images/home/works_img01.jpg"
-                              alt=""
-                            />
-                            <span class="p-home-works__itemTag -archi"
-                              >建築</span
-                            >
-                          </figure>
-                          <div class="p-home-works__info">
-                            <h3 class="p-home-works__title">◯◯ビル工事</h3>
-                            <time>2022.02.24</time>
-                          </div>
+
+                    <li class="p-works-category__card --house splide__slide">
+                      <a href="">
+                        <figure class="p-works-category__image">
+                          <img
+                            src="<%= path %>assets/images/works/works_img02.jpg"
+                            alt=""
+                          />
+                        </figure>
+                        <div class="p-works-category__card-text-wrapper">
+                          <p class="p-works-category__card-title">◯◯県◯◯宅</p>
+                          <p class="p-works-category__card-date">2022.02.24</p>
                         </div>
                       </a>
                     </li>
-                    <li class="p-home-works__slide splide__slide">
-                      <a href="" class="p-home-works__slideLink">
-                        <div class="p-home-works__item slide-img">
-                          <figure>
-                            <img
-                              src="assets/images/home/works_img01.jpg"
-                              alt=""
-                            />
-                            <span class="p-home-works__itemTag -archi"
-                              >建築</span
-                            >
-                          </figure>
-                          <div class="p-home-works__info">
-                            <h3 class="p-home-works__title">◯◯ビル工事</h3>
-                            <time>2022.02.24</time>
-                          </div>
+
+                    <li class="p-works-category__card --civil splide__slide">
+                      <a href="">
+                        <figure class="p-works-category__image">
+                          <img
+                            src="<%= path %>assets/images/works/works_img03.jpg"
+                            alt=""
+                          />
+                        </figure>
+                        <div class="p-works-category__card-text-wrapper">
+                          <p class="p-works-category__card-title">◯◯補修工事</p>
+                          <p class="p-works-category__card-date">2022.02.24</p>
                         </div>
                       </a>
                     </li>
-                    <li class="p-home-works__slide splide__slide">
-                      <a href="" class="p-home-works__slideLink">
-                        <div class="p-home-works__item slide-img">
-                          <figure>
-                            <img
-                              src="assets/images/home/works_img01.jpg"
-                              alt=""
-                            />
-                            <span class="p-home-works__itemTag -archi"
-                              >建築</span
-                            >
-                          </figure>
-                          <div class="p-home-works__info">
-                            <h3 class="p-home-works__title">◯◯ビル工事</h3>
-                            <time>2022.02.24</time>
-                          </div>
+
+                    <li class="p-works-category__card --archi splide__slide">
+                      <a href="">
+                        <figure class="p-works-category__image">
+                          <img
+                            src="<%= path %>assets/images/works/works_img04.jpg"
+                            alt=""
+                          />
+                        </figure>
+                        <div class="p-works-category__card-text-wrapper">
+                          <p class="p-works-category__card-title">◯◯ビル</p>
+                          <p class="p-works-category__card-date">2022.02.24</p>
                         </div>
                       </a>
                     </li>
-                    <li class="p-home-works__slide splide__slide">
-                      <a href="" class="p-home-works__slideLink">
-                        <div class="p-home-works__item slide-img">
-                          <figure>
-                            <img
-                              src="assets/images/home/works_img01.jpg"
-                              alt=""
-                            />
-                            <span class="p-home-works__itemTag -archi"
-                              >建築</span
-                            >
-                          </figure>
-                          <div class="p-home-works__info">
-                            <h3 class="p-home-works__title">◯◯ビル工事</h3>
-                            <time>2022.02.24</time>
-                          </div>
+
+                    <li class="p-works-category__card --civil splide__slide">
+                      <a href="">
+                        <figure class="p-works-category__image">
+                          <img
+                            src="<%= path %>assets/images/works/works_img05.jpg"
+                            alt=""
+                          />
+                        </figure>
+                        <div class="p-works-category__card-text-wrapper">
+                          <p class="p-works-category__card-title">◯◯工事</p>
+                          <p class="p-works-category__card-date">2022.02.24</p>
                         </div>
                       </a>
                     </li>
+
+                    <li class="p-works-category__card --archi splide__slide">
+                      <a href="">
+                        <figure class="p-works-category__image">
+                          <img
+                            src="<%= path %>assets/images/works/works_img06.jpg"
+                            alt=""
+                          />
+                        </figure>
+                        <div class="p-works-category__card-text-wrapper">
+                          <p class="p-works-category__card-title">◯◯ビル</p>
+                          <p class="p-works-category__card-date">2022.02.24</p>
+                        </div>
+                      </a>
+                    </li>
+
                     <!-- /スライダーのコンテンツ -->
                   </ul>
                 </div>
               </div>
 
               <!-- splide -->
-              <!-- mouse cursor -->
-              <div id="js-cursor" class="p-cursor"></div>
-              <div id="js-chaser" class="p-chaser">
-                <p class="text">DRAG</p>
-              </div>
-              <!-- /mouse cursor -->
 
               <!-- c-text-loop -->
               <div class="c-text-loop">
@@ -474,12 +539,17 @@
           </section>
           <section class="p-home-news">
             <div class="p-home-news__inner">
-              <!-- c-heading -->
-              <div class="c-heading">
-                <h2 class="c-heading__title">News</h2>
-                <div class="c-heading__subtitle">新着情報</div>
-              </div>
-              <!-- c-heading -->
+              <!-- l-section-title -->
+              <h2 class="l-section__title js-title inview">
+                <span class="l-section__titleTextWrap">
+                  <span class="l-section__titleText">N</span>
+                  <span class="l-section__titleText">e</span>
+                  <span class="l-section__titleText">w</span>
+                  <span class="l-section__titleText">s</span>
+                </span>
+                <span class="-jp">新着情報</span>
+              </h2>
+              <!-- l-section-title -->
               <div class="p-home-news__card-container">
                 <ul class="p-home-news__card-list">
                   <li class="p-home-news__card">
@@ -607,12 +677,20 @@
             />
           </figure>
           <div class="p-home-recruit__inner">
-            <!-- c-heading -->
-            <div class="c-heading">
-              <h2 class="c-heading__title">Recruit</h2>
-              <div class="c-heading__subtitle">採用情報</div>
-            </div>
-            <!-- c-heading -->
+            <!-- l-section-title -->
+            <h2 class="l-section__title js-title inview">
+              <span class="l-section__titleTextWrap">
+                <span class="l-section__titleText">R</span>
+                <span class="l-section__titleText">e</span>
+                <span class="l-section__titleText">c</span>
+                <span class="l-section__titleText">r</span>
+                <span class="l-section__titleText">u</span>
+                <span class="l-section__titleText">i</span>
+                <span class="l-section__titleText">t</span>
+              </span>
+              <span class="-jp">採用情報</span>
+            </h2>
+            <!-- l-section-title -->
             <!-- c-desc -->
             <div class="c-desc">
               <div class="c-desc__text">
@@ -641,10 +719,34 @@
           </div>
           <!-- c-text-loop -->
         </section>
+
+        <!-- only-mobile-footer -->
+        <div class="p-fixed-button">
+          <ul class="p-fixed-button__list">
+            <li class="p-fixed-button__item">
+              <a href="./entry" class="p-fixed-button__link -entry">ENTRY</a>
+            </li>
+            <li class="p-fixed-button__item">
+              <a href="./recruit" class="p-fixed-button__link -recruit"
+                >RECRUIT</a
+              >
+            </li>
+            <li class="p-fixed-button__item">
+              <a href="./contact" class="p-fixed-button__link -contact"
+                >CONTACT</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- only-mobile-footer -->
       </main>
       <!-- /main -->
       <!-- footer -->
       <%- include('./common/_footer', {pageId:pageId }) %>
+      <!-- TweenMax.min.js -->
+      <script src="<%= path %>assets/js/TweenMax.min.js"></script>
+      <!-- sliderCursor.js -->
+      <script src="<%= path %>assets/js/sliderCursor.js"></script>
       <!-- script -->
       <%- include('./common/_script', {pageId:pageId }) %>
       <!-- script -->

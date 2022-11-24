@@ -2,18 +2,26 @@
 <!DOCTYPE html>
 <html lang="ja">
   <%- include('../common/_head', {pageId:pageId }) %>
-  <body class="">
+  <body class="subpage">
     <div class="wrap" ontouchstart="">
       <%- include('../common/_header', {pageId:pageId }) %>
       <!-- main -->
       <main class="l-main">
-        <section class="l-hero">
+        <section class="l-hero" id="js-top">
           <div class="l-hero__main-wrapper">
             <div class="l-hero__heading-wrapper">
-              <div class="c-heading">
-                <h2 class="c-heading__title">Works</h2>
-                <div class="c-heading__subtitle">施工実績</div>
-              </div>
+              <!-- l-section-title -->
+              <h2 class="l-section__title js-title load">
+                <span class="l-section__titleTextWrap">
+                  <span class="l-section__titleText">W</span>
+                  <span class="l-section__titleText">o</span>
+                  <span class="l-section__titleText">r</span>
+                  <span class="l-section__titleText">k</span>
+                  <span class="l-section__titleText">s</span>
+                </span>
+                <span class="-jp">施工実績</span>
+              </h2>
+              <!-- l-section-title -->
             </div>
             <figure class="l-hero__image">
               <img src="<%= path %>assets/images/works/hero_works.jpg" alt="" />
@@ -168,12 +176,100 @@
                   </div>
                 </a>
               </li>
+
+              <li class="p-works-category__card --house">
+                <a href="">
+                  <figure class="p-works-category__image">
+                    <img
+                      src="<%= path %>assets/images/works/works_img07.jpg"
+                      alt=""
+                    />
+                  </figure>
+                  <div class="p-works-category__card-text-wrapper">
+                    <p class="p-works-category__card-title">◯◯県◯◯宅</p>
+                    <p class="p-works-category__card-date">2022.02.24</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="p-works-category__card --civil">
+                <a href="">
+                  <figure class="p-works-category__image">
+                    <img
+                      src="<%= path %>assets/images/works/works_img08.jpg"
+                      alt=""
+                    />
+                  </figure>
+                  <div class="p-works-category__card-text-wrapper">
+                    <p class="p-works-category__card-title">◯◯工事</p>
+                    <p class="p-works-category__card-date">2022.02.24</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="p-works-category__card --archi">
+                <a href="">
+                  <figure class="p-works-category__image">
+                    <img
+                      src="<%= path %>assets/images/works/works_img09.jpg"
+                      alt=""
+                    />
+                  </figure>
+                  <div class="p-works-category__card-text-wrapper">
+                    <p class="p-works-category__card-title">◯◯ビル</p>
+                    <p class="p-works-category__card-date">2022.02.24</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="p-works-category__card --house">
+                <a href="">
+                  <figure class="p-works-category__image">
+                    <img
+                      src="<%= path %>assets/images/works/works_img07.jpg"
+                      alt=""
+                    />
+                  </figure>
+                  <div class="p-works-category__card-text-wrapper">
+                    <p class="p-works-category__card-title">◯◯県◯◯宅</p>
+                    <p class="p-works-category__card-date">2022.02.24</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="p-works-category__card --civil">
+                <a href="">
+                  <figure class="p-works-category__image">
+                    <img
+                      src="<%= path %>assets/images/works/works_img08.jpg"
+                      alt=""
+                    />
+                  </figure>
+                  <div class="p-works-category__card-text-wrapper">
+                    <p class="p-works-category__card-title">◯◯工事</p>
+                    <p class="p-works-category__card-date">2022.02.24</p>
+                  </div>
+                </a>
+              </li>
+
+              <li class="p-works-category__card --archi">
+                <a href="">
+                  <figure class="p-works-category__image">
+                    <img
+                      src="<%= path %>assets/images/works/works_img09.jpg"
+                      alt=""
+                    />
+                  </figure>
+                  <div class="p-works-category__card-text-wrapper">
+                    <p class="p-works-category__card-title">◯◯ビル</p>
+                    <p class="p-works-category__card-date">2022.02.24</p>
+                  </div>
+                </a>
+              </li>
             </ul>
           </div>
           <div class="p-works-category__btn-wrapper">
-            <button class="p-works-category__btn">
-              <a href=""> View More </a>
-            </button>
+            <button class="p-works-category__btn">View More</button>
           </div>
           <div class="p-works-category__pagenation">
             <div class="p-works-category__pagenation__arrow">
@@ -200,7 +296,8 @@
       <!-- /main -->
       <%- include('../common/_subFooter', {pageId:pageId }) %> <%-
       include('../common/_footer', {pageId:pageId }) %> <%-
-      include('../common/_script', {pageId:pageId }) %>
+      include('../common/_script', {pageId:pageId }) %> <%-
+      include('../common/script/_script-works', {pageId:pageId }) %>
     </div>
   </body>
 </html>

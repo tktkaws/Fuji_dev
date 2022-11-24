@@ -7,13 +7,20 @@
     <div class="" ontouchstart="">
       <%- include('../../common/_header', {pageId:pageId }) %>
       <main>
-        <section class="l-hero">
+        <section class="l-hero" id="js-top">
           <div class="l-hero__main-wrapper">
             <div class="l-hero__heading-wrapper">
-              <div class="c-heading">
-                <h2 class="c-heading__title">News</h2>
-                <div class="c-heading__subtitle">新着情報</div>
-              </div>
+              <!-- l-section-title -->
+              <h2 class="l-section__title js-title load">
+                <span class="l-section__titleTextWrap">
+                  <span class="l-section__titleText">N</span>
+                  <span class="l-section__titleText">e</span>
+                  <span class="l-section__titleText">w</span>
+                  <span class="l-section__titleText">s</span>
+                </span>
+                <span class="-jp">新着情報</span>
+              </h2>
+              <!-- l-section-title -->
             </div>
             <figure class="l-hero__image">
               <!-- <img src="<%= path %>assets/images/news/hero_news.jpg" alt="" /> -->

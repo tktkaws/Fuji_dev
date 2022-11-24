@@ -133,27 +133,35 @@
   }
 }
 
+// シェアボタン
+.p-news-detail__socialItem {
+  position: relative;
+}
 .url-copied {
   display: none;
-  span {
-    position: absolute;
-    top: -20px;
-    left: 50%;
-    display: block;
-    width: max-content;
-    letter-spacing: 0em;
-    font-weight: 500;
-    font-size: max(1.1rem, 11px);
-    line-height: 1;
-    transform: translate(-50%, 0%);
-  }
+}
+.url-copied span {
+  -webkit-transform: translate(-50%, 0%);
+  display: block;
+  position: absolute;
+  top: -2rem;
+  left: 50%;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  transform: translate(-50%, 0%);
+  font-weight: 500;
+  font-size: max(1.1rem, 11px);
+  line-height: 1;
+  letter-spacing: 0em;
 }
 
-//   "xl": "(max-width: 1440px)",
-//   "lg": "(max-width: 1280px)",
-//   "md": "(max-width: 1024px)",
-//   "min-md": "(min-width: 1025px)",
-//   "sm": "(max-width: 768px)",
+.url-copied span {
+  font-weight: 500;
+  font-size: max(1.2rem, 12px);
+  line-height: 1;
+  letter-spacing: 0em;
+}
 
 @include mq(lg) {
 }
