@@ -20,17 +20,10 @@
    <link rel="stylesheet" href="../../assets/css/style.css" />
    <!-- Remove "outline" when in focus(other than keyboard operation) -->
    <script src="https://cdn.jsdelivr.net/npm/focus-visible@5.2.0/dist/focus-visible.min.js" integrity="sha384-xRa5B8rCDfdg0npZcxAh+RXswrbFk3g6dlHVeABeluN8EIwdyljz/LqJgc2R3KNA" crossorigin="anonymous" defer></script>
-   <!-- ファイルからの読み込みに切り替える TOP/KVはこれがないと動かない -->
-   <!-- <link
-    rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
-  />
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script> -->
  </head>
  <body class="subpage js-body">
    <div class="" ontouchstart="">
-     <header class="l-header" id="js-top">
+     <header id="js-header" class="l-header">
        <div class="l-header__inner">
          <figure class="l-header__logo">
            <a href="">
@@ -182,12 +175,20 @@
      <!-- /cusor-pointer -->
      <!-- main -->
      <main id="top" class="l-main">
-       <section class="l-hero--noimg">
+       <section class="l-hero--noimg" id="js-top">
          <div class="l-hero--noimg__heading-wrapper">
-           <div class="c-heading">
-             <h2 class="c-heading__title">Works</h2>
-             <div class="c-heading__subtitle">施工実績</div>
-           </div>
+           <!-- l-section-title -->
+           <h2 class="l-section__title js-title load">
+             <span class="l-section__titleTextWrap">
+               <span class="l-section__titleText">W</span>
+               <span class="l-section__titleText">o</span>
+               <span class="l-section__titleText">r</span>
+               <span class="l-section__titleText">k</span>
+               <span class="l-section__titleText">s</span>
+             </span>
+             <span class="-jp">施工実績</span>
+           </h2>
+           <!-- l-section-title -->
          </div>
          <div class="l-hero--noimg__breadcrumbs">
            <a href="">top</a><a href="">施工実績</a>高等学校改修工事

@@ -20,7 +20,7 @@ module.exports = {
       "js",
       "service.js"
     ),
-    sample: path.join(__dirname, "_static", "src", "assets", "js", "sample.js"),
+    works: path.join(__dirname, "_static", "src", "assets", "js", "works.js"),
     recruit: path.join(
       __dirname,
       "_static",

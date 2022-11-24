@@ -1778,9 +1778,9 @@ body.subpage .l-header {
   opacity: 0;
   transition: opacity 1s cubic-bezier(0.4, 0, 0.2, 1);
 }
-.p-home-catch__text.is-loaded {
-  opacity: 1;
-}
+// .p-home-catch__text.is-loaded {
+//   opacity: 1;
+// }
 
 /* home-loop
 ----------------------------------------- */
@@ -2175,7 +2175,7 @@ body.subpage .l-header {
 
 .p-home-slider {
   -webkit-transform: translate(0%, 0%);
-  z-index: 5;
+  z-index: 4;
   position: absolute;
   top: 7rem;
   right: 0;

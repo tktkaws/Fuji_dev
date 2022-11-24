@@ -2,12 +2,12 @@
 <!DOCTYPE html>
 <html lang="ja">
   <%- include('../common/_head', {pageId:pageId }) %>
-  <body class="">
+  <body class="subpage">
     <div class="wrap" ontouchstart="">
       <%- include('../common/_header', {pageId:pageId }) %>
       <!-- main -->
       <main class="l-main">
-        <section class="l-hero">
+        <section class="l-hero" id="js-top">
           <div class="l-hero__main-wrapper">
             <div class="l-hero__heading-wrapper">
               <!-- l-section-title -->
@@ -110,14 +110,15 @@
             </div>
           </div>
           <div class="p-company-access__container">
-            <iframe
+            <div id="maps"></div>
+            <!-- <iframe
               class="p-company-access__map"
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3242.19622216596!2d140.03321271568743!3d35.647536880202225!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6022821fd52ebfdf%3A0xcec0c09c4bed45e0!2z5bmV5by144Oh44OD44K7!5e0!3m2!1sja!2sjp!4v1667944000724!5m2!1sja!2sjp"
               style="border: 0"
               allowfullscreen=""
               loading="lazy"
               referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
+            ></iframe> -->
             <dl class="c-definition__list">
               <div class="c-definition__list-item">
                 <dt class="c-definition__term">住所</dt>
@@ -144,5 +145,64 @@
       include('../common/_footer', {pageId:pageId }) %> <%-
       include('../common/_script', {pageId:pageId }) %>
     </div>
+
+    <!-- APIを利用するためのライブラリ（CDN）の読み込み -->
+    <script
+      src="//maps.googleapis.com/maps/api/js?key=AIzaSyDtqCTltRy0JWgDs68gDj8LA3CBcEwVdyM&callback=initMap"
+      async
+    ></script>
+
+    <!-- マーカーをオリジナル画像にするためのスクリプト -->
+    <script>
+      if (window.matchMedia("(max-width: 767px)").matches) {
+        //スマホ処理
+        function initMap() {
+          var mapPosition = { lat: 35.64828, lng: 140.03468 };
+          var mapArea = document.getElementById("maps");
+          var mapOptions = {
+            center: mapPosition,
+            zoom: 14,
+          };
+          var map = new google.maps.Map(mapArea, mapOptions);
+
+          var markerOptions = {
+            map: map,
+            position: mapPosition,
+
+            icon: new google.maps.MarkerImage(
+              "/assets/images/common/map_icon_sp.png",
+              new google.maps.Size(100, 66),
+              new google.maps.Point(0, 0),
+              new google.maps.Point(50, 50)
+            ),
+          };
+          var marker = new google.maps.Marker(markerOptions);
+        }
+      } else if (window.matchMedia("(min-width:769px)").matches) {
+        //PC処理
+        function initMap() {
+          var mapPosition = { lat: 35.64828, lng: 140.03468 };
+          var mapArea = document.getElementById("maps");
+          var mapOptions = {
+            center: mapPosition,
+            zoom: 16,
+          };
+          var map = new google.maps.Map(mapArea, mapOptions);
+
+          var markerOptions = {
+            map: map,
+            position: mapPosition,
+
+            icon: new google.maps.MarkerImage(
+              "/assets/images/common/map_icon_pc.png",
+              new google.maps.Size(162, 107),
+              new google.maps.Point(0, 0),
+              new google.maps.Point(80, 50)
+            ),
+          };
+          var marker = new google.maps.Marker(markerOptions);
+        }
+      }
+    </script>
   </body>
 </html>

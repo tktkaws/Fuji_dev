@@ -48,7 +48,14 @@
   width: 555px;
   height: 68px;
   text-align: center;
+  border: solid 1px $c-black;
   color: $c-white;
+  transition: background-color 0.5s ease, color 0.5s ease;
+  &:hover {
+    background-color: $c-white;
+    color: $c-black;
+  }
+
   @include mq(sm) {
     // width: 350px;
     width: min(86vw, 350px);

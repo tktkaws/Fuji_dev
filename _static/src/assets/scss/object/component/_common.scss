@@ -65,9 +65,6 @@
 
 .c-heading {
   padding-left: 2em;
-  @include mq(sm) {
-  }
-  // padding-left: $size5;
   &__title {
     font-family: $f-en;
     font-size: 6.4rem;
@@ -75,8 +72,6 @@
       font-size: fluid(42, 64, 320, 768);
     }
     font-weight: bold;
-    // margin-top: 5rem;
-    // margin-left: 2rem;
     position: relative;
     &::before {
       position: absolute;

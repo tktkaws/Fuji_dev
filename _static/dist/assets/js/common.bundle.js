@@ -16,7 +16,7 @@
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\nvar $ = (jquery__WEBPACK_IMPORTED_MODULE_0___default());\n__webpack_require__(/*! ./modules/subMenu */ \"./_static/src/assets/js/modules/subMenu.js\");\n__webpack_require__(/*! ./modules/headerScroll */ \"./_static/src/assets/js/modules/headerScroll.js\");\n__webpack_require__(/*! ./modules/kvSlider */ \"./_static/src/assets/js/modules/kvSlider.js\");\n__webpack_require__(/*! ./modules/kvOverlay */ \"./_static/src/assets/js/modules/kvOverlay.js\");\n__webpack_require__(/*! ./modules/parallaxImg */ \"./_static/src/assets/js/modules/parallaxImg.js\");\n__webpack_require__(/*! ./modules/map */ \"./_static/src/assets/js/modules/map.js\");\n\n//# sourceURL=webpack://cording_template/./_static/src/assets/js/common.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\nvar $ = (jquery__WEBPACK_IMPORTED_MODULE_0___default());\n__webpack_require__(/*! ./modules/subMenu */ \"./_static/src/assets/js/modules/subMenu.js\");\n__webpack_require__(/*! ./modules/headerScroll */ \"./_static/src/assets/js/modules/headerScroll.js\");\n__webpack_require__(/*! ./modules/kvOverlay */ \"./_static/src/assets/js/modules/kvOverlay.js\");\n__webpack_require__(/*! ./modules/parallaxImg */ \"./_static/src/assets/js/modules/parallaxImg.js\");\n__webpack_require__(/*! ./modules/sectionTitle */ \"./_static/src/assets/js/modules/sectionTitle.js\");\n__webpack_require__(/*! ./modules/triggerAnimation */ \"./_static/src/assets/js/modules/triggerAnimation.js\");\n\n//# sourceURL=webpack://cording_template/./_static/src/assets/js/common.js?");
 
 /***/ }),
 
@@ -41,27 +41,6 @@ eval("/*==============================================================\n  kvOver
 
 /***/ }),
 
-/***/ "./_static/src/assets/js/modules/kvSlider.js":
-/*!***************************************************!*\
-  !*** ./_static/src/assets/js/modules/kvSlider.js ***!
-  \***************************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\nvar $ = (jquery__WEBPACK_IMPORTED_MODULE_0___default());\n\n/*==============================================================\n  ・TOP kvslider\n==============================================================*/\nvar sliderThumbnail = new Swiper(\".swiper-container-text\", {\n  slidesPerView: 1,\n  loop: true,\n  effect: \"fade\",\n  autoplay: {\n    delay: 4000,\n    disableOnInteraction: false\n  },\n  speed: 500\n});\nvar mySwiper = new Swiper(\".swiper\", {\n  // Optional parameters\n  loop: true,\n  effect: \"fade\",\n  autoplay: {\n    delay: 4000,\n    // delay: 12000,\n    disableOnInteraction: false\n  },\n  speed: 500,\n  thumbs: {\n    swiper: sliderThumbnail\n  }\n});\n\n/*==============================================================\n  ・TOP kvキャッチコピーのディレイ\n==============================================================*/\n\n$(\".js-slider-text .p-home-kv__engText\").each(function () {\n  var letters = $(this).closest(\".p-home-kv__engWrap\").find(\".p-home-kv__engText\");\n  var index = $(letters).index(this);\n  var time = index * 0.03;\n  $(this).css(\"animation-delay\", time + \"s\");\n});\n\n//# sourceURL=webpack://cording_template/./_static/src/assets/js/modules/kvSlider.js?");
-
-/***/ }),
-
-/***/ "./_static/src/assets/js/modules/map.js":
-/*!**********************************************!*\
-  !*** ./_static/src/assets/js/modules/map.js ***!
-  \**********************************************/
-/***/ (function() {
-
-eval("window.initMap = function () {\n  var map;\n  var area = document.getElementById(\"map\"); // マップを表示させるHTMLの箱 // マップの中心位置(例:原宿駅)\n  var center = {\n    lat: 35.667379,\n    lng: 139.7054965\n  };\n\n  //マップ作成\n  map = new google.maps.Map(area, {\n    center: center,\n    zoom: 17\n  });\n};\n\n//# sourceURL=webpack://cording_template/./_static/src/assets/js/modules/map.js?");
-
-/***/ }),
-
 /***/ "./_static/src/assets/js/modules/parallaxImg.js":
 /*!******************************************************!*\
   !*** ./_static/src/assets/js/modules/parallaxImg.js ***!
@@ -69,6 +48,17 @@ eval("window.initMap = function () {\n  var map;\n  var area = document.getEleme
 /***/ (function() {
 
 eval("var targets = document.querySelectorAll(\".js-parallax-img\");\ntargets.forEach(function (target) {\n  gsap.fromTo(target.querySelector(\"img\"), {\n    y: -30,\n    scale: 1.2\n  }, {\n    y: +30,\n    ease: \"none\",\n    scrollTrigger: {\n      trigger: target,\n      start: \"top bottom\",\n      end: \"bottom top\",\n      scrub: 0\n      // markers: true,\n    }\n  });\n});\n\n//# sourceURL=webpack://cording_template/./_static/src/assets/js/modules/parallaxImg.js?");
+
+/***/ }),
+
+/***/ "./_static/src/assets/js/modules/sectionTitle.js":
+/*!*******************************************************!*\
+  !*** ./_static/src/assets/js/modules/sectionTitle.js ***!
+  \*******************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/*==============================================================\n  sectionTitle\n  ・各見出しテキストディレイ\n==============================================================*/\n\n\nvar $ = (jquery__WEBPACK_IMPORTED_MODULE_0___default());\n$('.js-title .l-section__titleText').each(function () {\n  var letters = $(this).closest('.l-section__titleTextWrap').find('.l-section__titleText');\n  var index = $(letters).index(this);\n  var time = index * 0.03;\n  $(this).css('animation-delay', time + 's');\n});\n\n//# sourceURL=webpack://cording_template/./_static/src/assets/js/modules/sectionTitle.js?");
 
 /***/ }),
 
@@ -80,6 +70,17 @@ eval("var targets = document.querySelectorAll(\".js-parallax-img\");\ntargets.fo
 
 "use strict";
 eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n\nvar $ = (jquery__WEBPACK_IMPORTED_MODULE_0___default());\n\n/*==============================================================\n  subMenu\n  ・ヘッダーのメガメニュー\n==============================================================*/\n\n$(function () {\n  $(\".js-submenu-trigger\").hover(function () {\n    $(this).find(\".js-submenu\").addClass(\"is-active\");\n    $(this).find(\".js-submenu\").removeClass(\"is-none\");\n  }, function () {\n    $(this).find(\".js-submenu\").removeClass(\"is-active\");\n    $(this).find(\".js-submenu\").addClass(\"is-none\");\n  });\n});\n\n/*==============================================================\nheader\n・スクロール時のアニメーション\n==============================================================*/\n\nvar beforePos = 0;\nfunction ScrollAnime() {\n  var elemTop = $(\"#js-top\").offset().top;\n  var scroll = $(window).scrollTop();\n  if (scroll == beforePos) {} else if (elemTop > scroll || 0 > scroll - beforePos) {\n    $(\".l-header\").removeClass(\"js-hide\");\n    $(\".l-header\").addClass(\"js-view\");\n  } else {\n    $(\".l-header\").removeClass(\"js-view\");\n    $(\".l-header\").addClass(\"js-hide\");\n  }\n  beforePos = scroll;\n}\n$(window).scroll(function () {\n  ScrollAnime();\n});\n\n//# sourceURL=webpack://cording_template/./_static/src/assets/js/modules/subMenu.js?");
+
+/***/ }),
+
+/***/ "./_static/src/assets/js/modules/triggerAnimation.js":
+/*!***********************************************************!*\
+  !*** ./_static/src/assets/js/modules/triggerAnimation.js ***!
+  \***********************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! jquery */ \"./node_modules/jquery/dist/jquery.js\");\n/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);\n/*==============================================================\n  triggerAnimation\n  ・スクロールトリガーアニメーション\n==============================================================*/\n\n\nvar $ = (jquery__WEBPACK_IMPORTED_MODULE_0___default());\n\n// ローディング時のアニメーション\n$(window).on('load', function () {\n  $('.load').addClass('is-anim');\n});\n\n// 見出しアニメーション\n$(window).scroll(function () {\n  $('.inview').each(function () {\n    var hit = $(this).offset().top;\n    var scroll = $(window).scrollTop();\n    var wHeight = $(window).height();\n    if (scroll > hit - wHeight + wHeight / 7) {\n      $(this).addClass('is-anim');\n    }\n  });\n});\n\n//# sourceURL=webpack://cording_template/./_static/src/assets/js/modules/triggerAnimation.js?");
 
 /***/ }),
 

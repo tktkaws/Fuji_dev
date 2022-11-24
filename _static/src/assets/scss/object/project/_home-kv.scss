@@ -24,8 +24,10 @@
     grid-column: 2/4;
     grid-row: 1;
     margin-top: 450px;
-    z-index: 1;
+    position: relative;
+    z-index: 6;
   }
+
   &__engWrap {
     font-family: $f-en;
     font-size: 8rem;
